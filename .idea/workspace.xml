@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="269b9c49-1208-468d-9e6b-75abbf8636e2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/r/images/donation-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/r/images/signout-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/r/images/user-dashboard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/r/images/user-signup.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503383253-solution_new_1503383253291.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503383505-solution_new_1503383505222.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503383703-solution_new_1503383703375.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503383771-solution_new_1503383771790.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503383845-solution_new_1503383845318.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503383858-solution_new_1503383858150.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503383988-solution_new_1503383988532.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503384016-solution_new_1503384016613.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503384115-solution_new_1503384115570.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503384171-solution_new_1503384171242.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503384464-solution_new_1503384464978.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503384568-solution_new_1503384568542.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503384898-solution_new_1503384898934.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503385089-solution_new_1503385089515.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503385167-solution_new_1503385167720.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503385290-solution_new_1503385290644.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503385318-solution_new_1503385318419.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503393094-solution_new_1503393094862.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503393355-solution_new_1503393355975.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503393597-solution_new_1503393597281.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503393687-solution_new_1503393687997.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503394038-solution_new_1503394038431.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503394979-solution_new_1503394979941.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503395137-solution_new_1503395137762.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503395249-solution_new_1503395249521.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396009-solution_new_1503396009121.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396027-solution_new_1503396027905.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396079-solution_new_1503396079146.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396345-solution_new_1503396345281.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396402-solution_new_1503396402697.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396532-solution_new_1503396532605.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396664-solution_new_1503396664531.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396711-solution_new_1503396711464.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396748-solution_new_1503396748610.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396772-solution_new_1503396772763.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503396792-solution_new_1503396792302.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503425883-solution_new_1503425883214.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503425898-solution_new_1503425898154.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503466202-solution_new_1503466202827.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503466817-solution_new_1503466817770.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503466988-solution_new_1503466988637.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/1503467408-solution_new_1503467408300.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/panels/users_content/views/profile_home_page.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/solution_new.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/panels/profile_content/controllers/Profile_content.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/panels/profile_content/helpers/profile_content_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/panels/profile_content/models/Profile_content_model.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/panels/profile_content/views/profile_home_page.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/modules_core/home/views/profile.php" afterPath="$PROJECT_DIR$/application/modules_core/user/views/profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502174735-solution_new_1502174735650.jpg" afterPath="$PROJECT_DIR$/uploads/1502174735-solution_new_1502174735650.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502174735-solution_new_1502174735757.jpeg" afterPath="$PROJECT_DIR$/uploads/1502174735-solution_new_1502174735757.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502174886-solution_new_1502174886157.jpeg" afterPath="$PROJECT_DIR$/uploads/1502174886-solution_new_1502174886157.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502174886-solution_new_1502174886583.jpg" afterPath="$PROJECT_DIR$/uploads/1502174886-solution_new_1502174886583.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502174893-solution_new_1502174893184.jpeg" afterPath="$PROJECT_DIR$/uploads/1502174893-solution_new_1502174893184.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502174893-solution_new_1502174893936.jpg" afterPath="$PROJECT_DIR$/uploads/1502174893-solution_new_1502174893936.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502175087-solution_new_1502175087201.jpeg" afterPath="$PROJECT_DIR$/uploads/1502175087-solution_new_1502175087201.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502175087-solution_new_1502175087709.jpg" afterPath="$PROJECT_DIR$/uploads/1502175087-solution_new_1502175087709.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502175142-solution_new_1502175142176.jpg" afterPath="$PROJECT_DIR$/uploads/1502175142-solution_new_1502175142176.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502175142-solution_new_1502175142673.jpeg" afterPath="$PROJECT_DIR$/uploads/1502175142-solution_new_1502175142673.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502185809-solution_new_1502185809349.mp4" afterPath="$PROJECT_DIR$/uploads/1502185809-solution_new_1502185809349.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502188640-solution_new_1502188640270.mp4" afterPath="$PROJECT_DIR$/uploads/1502188640-solution_new_1502188640270.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502188640-solution_new_1502188640370.mp4" afterPath="$PROJECT_DIR$/uploads/1502188640-solution_new_1502188640370.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502188640-solution_new_1502188640510.mp4" afterPath="$PROJECT_DIR$/uploads/1502188640-solution_new_1502188640510.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502188640-solution_new_1502188640843.mp4" afterPath="$PROJECT_DIR$/uploads/1502188640-solution_new_1502188640843.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128105.jpg" afterPath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128105.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128345.jpg" afterPath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128345.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128393.jpg" afterPath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128393.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128510.jpg" afterPath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128510.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128870.jpg" afterPath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128870.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128938.jpg" afterPath="$PROJECT_DIR$/uploads/1502189128-solution_new_1502189128938.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502221309-solution_new_1502221309509.mp4" afterPath="$PROJECT_DIR$/uploads/1502221309-solution_new_1502221309509.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502221756-solution_new_1502221756769.mp4" afterPath="$PROJECT_DIR$/uploads/1502221756-solution_new_1502221756769.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502222059-solution_new_1502222059619.mp4" afterPath="$PROJECT_DIR$/uploads/1502222059-solution_new_1502222059619.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502222118-solution_new_1502222118166.mp4" afterPath="$PROJECT_DIR$/uploads/1502222118-solution_new_1502222118166.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502267975-solution_new_1502267975388.jpeg" afterPath="$PROJECT_DIR$/uploads/1502267975-solution_new_1502267975388.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/1502657865-solution_new_1502657865907.jpeg" afterPath="$PROJECT_DIR$/uploads/1502657865-solution_new_1502657865907.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/index.jpeg" afterPath="$PROJECT_DIR$/uploads/index.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/index1.jpeg" afterPath="$PROJECT_DIR$/uploads/index1.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/index2.jpeg" afterPath="$PROJECT_DIR$/uploads/index2.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/lamborghini-huracan-performante.jpg" afterPath="$PROJECT_DIR$/uploads/lamborghini-huracan-performante.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/lamborghini-huracan-performante1.jpg" afterPath="$PROJECT_DIR$/uploads/lamborghini-huracan-performante1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/lamborghini-huracan-performante2.jpg" afterPath="$PROJECT_DIR$/uploads/lamborghini-huracan-performante2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/solution_new_1501828332552.jpeg" afterPath="$PROJECT_DIR$/uploads/solution_new_1501828332552.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/solution_new_1501828332774.jpg" afterPath="$PROJECT_DIR$/uploads/solution_new_1501828332774.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/solution_new_1501828381679.jpg" afterPath="$PROJECT_DIR$/uploads/solution_new_1501828381679.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/solution_new_1501949391713.png" afterPath="$PROJECT_DIR$/uploads/solution_new_1501949391713.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/solution_new_1502169918211.jpg" afterPath="$PROJECT_DIR$/uploads/solution_new_1502169918211.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/solution_new_1502169918636.jpeg" afterPath="$PROJECT_DIR$/uploads/solution_new_1502169918636.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/solution_new_1502171909613.jpg" afterPath="$PROJECT_DIR$/uploads/solution_new_1502171909613.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploads/solution_new_1502172255564.jpg" afterPath="$PROJECT_DIR$/uploads/solution_new_1502172255564.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/Appuploader.php" afterPath="$PROJECT_DIR$/application/libraries/Appuploader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules_core/categories/controllers/Categories.php" afterPath="$PROJECT_DIR$/application/modules_core/categories/controllers/Categories.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules_core/home/controllers/Home.php" afterPath="$PROJECT_DIR$/application/modules_core/home/controllers/Home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules_core/user/controllers/User.php" afterPath="$PROJECT_DIR$/application/modules_core/user/controllers/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/categories_content/controllers/Categories_content.php" afterPath="$PROJECT_DIR$/application/panels/categories_content/controllers/Categories_content.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/categories_content/helpers/categories_content_helper.php" afterPath="$PROJECT_DIR$/application/panels/categories_content/helpers/categories_content_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/categories_content/models/Categories_content_model.php" afterPath="$PROJECT_DIR$/application/panels/categories_content/models/Categories_content_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/categories_content/views/super_user_create_categories_form.php" afterPath="$PROJECT_DIR$/application/panels/categories_content/views/super_user_create_categories_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/categories_content/views/super_user_edit_categories_form.php" afterPath="$PROJECT_DIR$/application/panels/categories_content/views/super_user_edit_categories_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/categories_content/views/super_user_view_categories.php" afterPath="$PROJECT_DIR$/application/panels/categories_content/views/super_user_view_categories.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/header/views/home_page_header.php" afterPath="$PROJECT_DIR$/application/panels/header/views/home_page_header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/left_sidebar/views/super_user_left_sidebar.php" afterPath="$PROJECT_DIR$/application/panels/left_sidebar/views/super_user_left_sidebar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/login_content/controllers/Login_content.php" afterPath="$PROJECT_DIR$/application/panels/login_content/controllers/Login_content.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/permissions_content/views/super_user_view_permissions.php" afterPath="$PROJECT_DIR$/application/panels/permissions_content/views/super_user_view_permissions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/stories_content/models/Stories_content_model.php" afterPath="$PROJECT_DIR$/application/panels/stories_content/models/Stories_content_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/stories_content/views/super_user_edit_stories_form.php" afterPath="$PROJECT_DIR$/application/panels/stories_content/views/super_user_edit_stories_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/top_menu/views/home_page_top_menu.php" afterPath="$PROJECT_DIR$/application/panels/top_menu/views/home_page_top_menu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/users_content/controllers/Users_content.php" afterPath="$PROJECT_DIR$/application/panels/users_content/controllers/Users_content.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/users_content/helpers/users_content_helper.php" afterPath="$PROJECT_DIR$/application/panels/users_content/helpers/users_content_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/panels/users_content/models/Users_content_model.php" afterPath="$PROJECT_DIR$/application/panels/users_content/models/Users_content_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/r/css/styles.css" afterPath="$PROJECT_DIR$/r/css/styles.css" />
+    </list>
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/r/css/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17118">
+              <caret line="951" column="0" lean-forward="false" selection-start-line="951" selection-start-column="0" selection-end-line="951" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Categories_content_model.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/panels/categories_content/models/Categories_content_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="categories_content_helper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/panels/categories_content/helpers/categories_content_helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-375">
+              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_page_header.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/panels/header/views/home_page_header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bxslider</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/application/modules_core/donation/views/donation.php" />
+        <option value="$PROJECT_DIR$/vendor/autoload.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/config/constants.php" />
+        <option value="$PROJECT_DIR$/application/panels/donation_content/views/donation_view.php" />
+        <option value="$PROJECT_DIR$/application/panels/cronejob_content/controllers/Cronejob_content.php" />
+        <option value="$PROJECT_DIR$/application/modules_core/cronjob/controllers/Cronejob.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/helpers/stories_content_helper.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/views/super_user_view_stories.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/views/admin_view_stories.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/views/super_user_create_stories_form.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/views/admin_create_stories_form.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/views/admin_edit_stories_form.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/views/super_user_edit_stories_form.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Model.php" />
+        <option value="$PROJECT_DIR$/application/modules_core/stories/views/detail_story_home_page_view.php" />
+        <option value="$USER_HOME$/Downloads/12 12 designs/solution_new - Project Detail Page html/project-detail.html" />
+        <option value="$PROJECT_DIR$/application/modules_core/donation/views/view_donation_history.php" />
+        <option value="$PROJECT_DIR$/application/modules_core/donation/controllers/Donation.php" />
+        <option value="$PROJECT_DIR$/application/modules_core/donation/views/view_donation_history_home_page.php" />
+        <option value="$PROJECT_DIR$/application/panels/header/views/super_user_header.php" />
+        <option value="$PROJECT_DIR$/application/panels/categories_content/controllers/Categories_content.php" />
+        <option value="$PROJECT_DIR$/r/css/bxslider.css" />
+        <option value="$PROJECT_DIR$/application/panels/donation_content/helpers/donation_content_helper.php" />
+        <option value="$PROJECT_DIR$/application/panels/donation_content/controllers/Donation_content.php" />
+        <option value="$PROJECT_DIR$/application/panels/donation_content/models/Donation_content_model.php" />
+        <option value="$PROJECT_DIR$/application/panels/top_menu/views/home_page_top_menu.php" />
+        <option value="$PROJECT_DIR$/application/panels/login_content/helpers/login_content_helper.php" />
+        <option value="$PROJECT_DIR$/application/modules_core/home/controllers/Home.php" />
+        <option value="$PROJECT_DIR$/application/panels/login_content/controllers/Login_content.php" />
+        <option value="$PROJECT_DIR$/application/panels/additional_js/views/home_additional_js.php" />
+        <option value="$PROJECT_DIR$/application/modules_core/stories/controllers/Stories.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/controllers/Stories_content.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/models/Stories_content_model.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/views/detail_story_home_page.php" />
+        <option value="$PROJECT_DIR$/application/panels/stories_content/views/stories_home_page.php" />
+        <option value="$PROJECT_DIR$/application/panels/donation_content/views/donation_history_home_page.php" />
+        <option value="$PROJECT_DIR$/application/panels/categories_content/views/categories_home_page.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/modules_core/categories/controllers/Categories.php" />
+        <option value="$PROJECT_DIR$/application/panels/login_content/views/login_content.php" />
+        <option value="$PROJECT_DIR$/r/css/styles.css" />
+        <option value="$PROJECT_DIR$/application/panels/header/views/home_page_header.php" />
+        <option value="$PROJECT_DIR$/application/panels/categories_content/views/super_user_create_categories_form.php" />
+        <option value="$PROJECT_DIR$/application/panels/categories_content/models/Categories_content_model.php" />
+        <option value="$PROJECT_DIR$/application/panels/categories_content/helpers/categories_content_helper.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="solution_new" type="b2602c69:ProjectViewProjectNode" />
+              <item name="solution_new" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHPUnit.application">
+    <configuration name="application" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/application" />
+    </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e82447a-428c-4162-ab3b-50bbef971bc6" name="Default" comment="" />
+      <created>1503127269378</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1503127269378</updated>
+      <workItem from="1503127281081" duration="545000" />
+      <workItem from="1503128104170" duration="7640000" />
+      <workItem from="1503136912883" duration="2219000" />
+      <workItem from="1503144748608" duration="794000" />
+      <workItem from="1503151924637" duration="4312000" />
+      <workItem from="1503224635495" duration="1019000" />
+      <workItem from="1503290705617" duration="21531000" />
+      <workItem from="1503334224491" duration="10372000" />
+      <workItem from="1503375494735" duration="32102000" />
+      <workItem from="1503413498462" duration="11189000" />
+      <workItem from="1503428700276" duration="2277000" />
+      <workItem from="1503462052260" duration="4927000" />
+      <workItem from="1503494226334" duration="419000" />
+      <workItem from="1503500267142" duration="9889000" />
+      <workItem from="1503512872360" duration="25000" />
+      <workItem from="1503521939213" duration="10000000" />
+      <workItem from="1503548781315" duration="731000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="144111000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_d.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="298" column="9" lean-forward="false" selection-start-line="298" selection-start-column="9" selection-end-line="298" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/donation_content/views/donation_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules_core/stories/views/detail_story_home_page_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules_core/donation/views/donation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/top_menu/views/super_user_top_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/categories_content/views/super_user_view_categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1461">
+          <caret line="97" column="52" lean-forward="true" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/top_menu/controllers/Top_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/r/LESS/custom.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules_core/donation/views/view_donation_history_home_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/r/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56859">
+          <caret line="4927" column="8" lean-forward="false" selection-start-line="4927" selection-start-column="8" selection-end-line="4927" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/stories_content/views/admin_view_stories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules_core/categories/views/categories_home_page_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/cronejob_content/controllers/Cronejob_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/r/css/bxslider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/newsletter_content/views/super_user_create_newsletter_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="98" column="42" lean-forward="true" selection-start-line="93" selection-start-column="36" selection-end-line="98" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/stories_content/views/super_user_create_stories_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules_core/donation/controllers/Donation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/donation_content/helpers/donation_content_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/stories_content/views/super_user_edit_stories_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1455">
+          <caret line="63" column="30" lean-forward="true" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/donation_content/models/Donation_content_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/stories_content/views/super_user_view_stories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-613">
+          <caret line="60" column="42" lean-forward="false" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/donation_content/controllers/Donation_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="141" column="83" lean-forward="false" selection-start-line="141" selection-start-column="57" selection-end-line="141" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules_core/stories/views/stories_home_page_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/additional_js/views/home_additional_js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="131" column="12" lean-forward="true" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/home_content/views/home_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2055">
+          <caret line="144" column="13" lean-forward="true" selection-start-line="144" selection-start-column="13" selection-end-line="144" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules_core/home/controllers/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/login_content/controllers/Login_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="273" column="77" lean-forward="false" selection-start-line="273" selection-start-column="77" selection-end-line="273" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/login_content/helpers/login_content_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="204" column="30" lean-forward="true" selection-start-line="204" selection-start-column="30" selection-end-line="204" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules_core/stories/controllers/Stories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-55">
+          <caret line="50" column="31" lean-forward="false" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/stories_content/views/detail_story_home_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/stories_content/controllers/Stories_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4698">
+          <caret line="261" column="32" lean-forward="false" selection-start-line="261" selection-start-column="32" selection-end-line="261" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/stories_content/views/stories_home_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/donation_content/views/donation_history_home_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/stories_content/models/Stories_content_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="327" column="66" lean-forward="false" selection-start-line="327" selection-start-column="66" selection-end-line="327" selection-end-column="66" />
+          <folding>
+            <marker date="1503558711152" expanded="true" signature="7695:7915" ph="SELECT MIN(r... resources" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/top_menu/views/home_page_top_menu_banner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/categories_content/views/categories_home_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="66" column="118" lean-forward="false" selection-start-line="66" selection-start-column="114" selection-end-line="66" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/categories_content/controllers/Categories_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/top_menu/views/home_page_top_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/dashboard_content/views/super_user_dashboard_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules_core/categories/controllers/Categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="89" column="9" lean-forward="false" selection-start-line="89" selection-start-column="9" selection-end-line="89" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/header/views/super_user_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/login_content/views/login_content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="57" column="18" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="57" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/header/views/login_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/categories_content/views/super_user_create_categories_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2307">
+          <caret line="130" column="23" lean-forward="true" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/r/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17118">
+          <caret line="951" column="0" lean-forward="false" selection-start-line="951" selection-start-column="0" selection-end-line="951" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/categories_content/models/Categories_content_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/categories_content/helpers/categories_content_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/panels/header/views/home_page_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

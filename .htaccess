@@ -1,0 +1,21 @@
+SetEnv ENVIRONMENT development
+SetEnv DOMAIN localhost
+SetEnv DB_USER mangocoders
+SetEnv DB_DATABASE eschool
+SetEnv DB_PASSWORD 53cr3t
+
+#SetEnv BASE_PATH http://localhost/
+
+# Customized error messages.
+ErrorDocument 404 /index.php
+ 
+# Set the default handler.
+DirectoryIndex index.php
+ 
+# Various rewrite rules.
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+</IfModule>

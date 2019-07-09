@@ -1,0 +1,856 @@
+-- Adminer 4.3.0 MySQL dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `admin_login`;
+CREATE TABLE `admin_login` (
+  `teacher_id` int(10) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `status` enum('active','inactive') NOT NULL,
+  `salt` varchar(22) NOT NULL,
+  PRIMARY KEY (`teacher_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=ascii;
+
+INSERT INTO `admin_login` (`teacher_id`, `first_name`, `last_name`, `email`, `password`, `status`, `salt`) VALUES
+(1,	'uzair',	'hussain',	'uzair.hussain7@gmail.com',	'bd737f4cc20bd00e58224c8ef57cf0b9277be638f0562765219669fb928aefd9',	'active',	'9f7'),
+(2,	'hussanain',	'pathan',	'hussanain@gmail.com',	'bd737f4cc20bd00e58224c8ef57cf0b9277be638f0562765219669fb928aefd9',	'active',	'9f7'),
+(3,	'Muhammad',	'Imran Khattak',	'imranktk782@gmail.com',	'bd737f4cc20bd00e58224c8ef57cf0b9277be638f0562765219669fb928aefd9',	'active',	'9f7');
+
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `category` (
+  `category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_name` varchar(255) NOT NULL,
+  `category_short_description` text,
+  `category_short_text` text,
+  `category_long_text` text,
+  `category_is_allowed` enum('0','1') NOT NULL DEFAULT '0',
+  `created_by` int(11) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `resource_type` varchar(255) NOT NULL,
+  `resource_path` varchar(255) NOT NULL,
+  `resource_name` varchar(255) NOT NULL,
+  `page_title` varchar(255) DEFAULT NULL,
+  `meta_keywords` text,
+  `meta_description` text,
+  PRIMARY KEY (`category_id`),
+  KEY `category_created_by` (`created_by`),
+  CONSTRAINT `category_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `category` (`category_id`, `category_name`, `category_short_description`, `category_short_text`, `category_long_text`, `category_is_allowed`, `created_by`, `date_created`, `date_updated`, `slug`, `resource_type`, `resource_path`, `resource_name`, `page_title`, `meta_keywords`, `meta_description`) VALUES
+(1,	'software',	'Category short description',	'software Heading',	'this is description of category 1 heading ',	'1',	1,	'2017-07-31 15:03:12',	'2017-08-31 17:34:27',	'software',	'image/jpeg',	'C:\\xampp\\htdocs\\solution_new\\uploads',	'software.jpeg',	'software',	'software',	'software'),
+(2,	'hardware',	'Category short description',	NULL,	NULL,	'1',	1,	'2017-07-31 15:22:13',	'2017-08-29 23:30:25',	'hardware',	'',	'',	'hardware.jpg',	'hardware',	'hardware',	'hardware'),
+(3,	'software_cloud',	'Category short description',	NULL,	NULL,	'1',	1,	'2017-07-31 15:37:10',	'2017-08-29 23:30:25',	'software_cloud',	'',	'',	'software_cloud.jpg',	NULL,	NULL,	NULL),
+(4,	'technology',	'Category short description',	NULL,	NULL,	'1',	1,	'2017-07-31 22:52:17',	'2017-08-29 23:30:25',	'technology',	'',	'',	'technology.jpg',	NULL,	NULL,	NULL),
+(5,	'services',	'Category short description',	'ca5',	'cat',	'0',	1,	'2017-08-03 15:58:18',	'2017-08-29 23:30:25',	'cat',	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/categories/',	'1503940812-twelve4twelve_1503940812689.jpg',	'cat',	'cat',	'assasasa'),
+(6,	'jjj',	'Category short description',	NULL,	NULL,	'0',	1,	'2017-08-03 16:16:25',	'2017-08-29 23:30:25',	'',	'',	'',	'',	NULL,	NULL,	NULL),
+(7,	'Cadmin',	'Category short description',	NULL,	NULL,	'0',	5,	'2017-08-07 17:19:16',	'2017-08-29 23:30:25',	'',	'',	'',	'',	NULL,	NULL,	NULL),
+(8,	'catt',	'Category short description',	NULL,	NULL,	'0',	1,	'2017-08-14 15:47:50',	'2017-08-29 23:30:25',	'',	'',	'',	'',	NULL,	NULL,	NULL),
+(9,	'caaaaat',	'Category short description',	NULL,	NULL,	'0',	1,	'2017-08-17 11:07:11',	'2017-08-29 23:30:25',	'',	'',	'',	'',	NULL,	NULL,	NULL),
+(10,	'check',	'asdasda',	'adasda',	'asdasd',	'0',	1,	'2017-08-29 10:58:23',	'2017-08-29 23:30:25',	'check',	'',	'',	'',	'asddasd',	'adasd',	'asdas'),
+(11,	'caaaaaa',	'sadasd',	'asdasda',	'asdasd',	'0',	1,	'2017-09-06 12:00:42',	'2017-09-06 12:00:52',	'caaaaaa',	'',	'',	'',	'asdasd',	'asdasd',	'asdasd'),
+(12,	'technology',	'asdasd',	'asdasd',	'asdasd',	'0',	1,	'2017-09-21 17:51:47',	'0000-00-00 00:00:00',	'tesssssstaaa',	'image/png',	'/var/www/html/twelve4twelve/uploads/categories/images/',	'1505998307-twelve4twelve_1505998307870.png',	'asdas',	'asd',	'asds');
+
+DROP TABLE IF EXISTS `confirmation_code`;
+CREATE TABLE `confirmation_code` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `code` varchar(255) NOT NULL,
+  `date_created` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `confirmation_code` (`id`, `email`, `code`, `date_created`) VALUES
+(1,	'rumman@hotmail.com',	'22c58a',	'2017-08-18'),
+(44,	'rumman.mangocoder@gmail.com',	'd8c431',	'2017-08-30'),
+(45,	'rummanchughtai@Hotmail.com',	'c8d5a6',	'2017-08-18'),
+(46,	'rummanchu@hotmail.com',	'e8d58a',	'2017-08-17'),
+(47,	'h@hotmail.com',	'b0860d',	'2017-08-17'),
+(48,	'asdfu@hotmail.com',	'79df54',	'2017-08-18'),
+(49,	'adnan@hotmail.com',	'71e38a',	'2017-08-22'),
+(50,	'rummanc@hotmail.com',	'dc4a0b',	'2017-08-30'),
+(51,	'adminnnn@hotmail.com',	'4bea7b',	'2017-08-30');
+
+DROP TABLE IF EXISTS `contact_us`;
+CREATE TABLE `contact_us` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `useremail` varchar(255) NOT NULL,
+  `userphone` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `date_created` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `crone_table`;
+CREATE TABLE `crone_table` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `email_template_id` int(11) NOT NULL,
+  `datetime` datetime NOT NULL,
+  `status` enum('Cancel','Schedule','Done','Draft') DEFAULT NULL,
+  `group` enum('allusers','stories') DEFAULT NULL,
+  `story_id` int(11) DEFAULT NULL,
+  `date_created` datetime DEFAULT NULL,
+  `date_updated` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `email_tempelate_id` (`email_template_id`),
+  CONSTRAINT `crone_table_ibfk_1` FOREIGN KEY (`email_template_id`) REFERENCES `email_template` (`email_template_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `crone_table` (`id`, `name`, `email_template_id`, `datetime`, `status`, `group`, `story_id`, `date_created`, `date_updated`) VALUES
+(18,	'new Letter',	1,	'2017-08-27 02:42:47',	'Cancel',	NULL,	NULL,	NULL,	NULL),
+(19,	'new Letters',	1,	'2017-08-18 10:54:40',	'Cancel',	NULL,	NULL,	NULL,	NULL),
+(20,	'ssssss',	1,	'2017-08-17 02:24:54',	'Done',	NULL,	NULL,	NULL,	NULL),
+(22,	'w',	1,	'2017-08-17 02:19:05',	'Done',	NULL,	NULL,	NULL,	NULL),
+(23,	'wwww',	1,	'2017-08-21 12:48:23',	'Cancel',	NULL,	NULL,	NULL,	NULL),
+(24,	'faq',	8,	'2017-08-29 04:45:58',	'Cancel',	'stories',	38,	'2017-08-29 16:46:16',	NULL),
+(25,	'faq1',	1,	'2017-08-29 04:47:50',	'Cancel',	'allusers',	NULL,	'2017-08-29 16:47:57',	NULL),
+(27,	'updates newsletter',	8,	'2017-08-29 05:57:38',	'Done',	'allusers',	NULL,	'2017-08-29 17:58:04',	NULL),
+(28,	'testssts',	3,	'2017-08-31 12:20:47',	'Done',	'stories',	23,	'2017-08-31 00:20:57',	NULL),
+(29,	'nnnn',	5,	'2017-09-08 05:57:12',	'Done',	'allusers',	NULL,	'2017-09-08 17:57:25',	NULL);
+
+DROP TABLE IF EXISTS `donations`;
+CREATE TABLE `donations` (
+  `donation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `donation_amount` float(10,2) NOT NULL DEFAULT '0.00',
+  `story_id` int(11) NOT NULL,
+  `donation_date_created` datetime NOT NULL,
+  `donation_date_updated` datetime NOT NULL,
+  `response_id` varchar(255) NOT NULL,
+  `balance_transaction` varchar(255) NOT NULL,
+  `exp_month` varchar(255) NOT NULL,
+  `exp_year` varchar(255) NOT NULL,
+  `last_4` int(11) NOT NULL,
+  PRIMARY KEY (`donation_id`),
+  KEY `user_id` (`user_id`),
+  KEY `story_id` (`story_id`),
+  CONSTRAINT `donations_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  CONSTRAINT `donations_ibfk_2` FOREIGN KEY (`story_id`) REFERENCES `story` (`story_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `donations` (`donation_id`, `user_id`, `first_name`, `last_name`, `email`, `donation_amount`, `story_id`, `donation_date_created`, `donation_date_updated`, `response_id`, `balance_transaction`, `exp_month`, `exp_year`, `last_4`) VALUES
+(1,	1,	NULL,	NULL,	NULL,	10000.00,	23,	'2017-08-09 00:56:14',	'2017-08-09 00:56:14',	'',	'',	'',	'',	0),
+(2,	1,	NULL,	NULL,	NULL,	20000.00,	23,	'2017-08-09 01:04:34',	'2017-08-09 01:04:34',	'',	'',	'',	'',	0),
+(3,	1,	NULL,	NULL,	NULL,	50000.00,	23,	'2017-08-09 01:32:14',	'2017-08-09 01:32:14',	'',	'',	'',	'',	0),
+(4,	1,	NULL,	NULL,	NULL,	5000.00,	23,	'2017-08-09 01:32:34',	'2017-08-09 01:32:34',	'',	'',	'',	'',	0),
+(14,	17,	NULL,	NULL,	NULL,	100.00,	23,	'2017-08-18 12:48:32',	'2017-08-18 12:48:32',	'',	'',	'',	'',	0),
+(16,	20,	'adnan',	'liaqat',	NULL,	15.00,	20,	'0000-00-00 00:00:00',	'0000-00-00 00:00:00',	'ch_1AtcH3LrCVHRiTGK8lPw4Cgf',	'txn_1AtcH3LrCVHRiTGKM0Pj9yKE',	'8',	'2017',	4242),
+(17,	20,	'adnan',	'liaqat',	NULL,	15.00,	20,	'0000-00-00 00:00:00',	'0000-00-00 00:00:00',	'ch_1AtcHYLrCVHRiTGKY2s7ggF1',	'txn_1AtcHYLrCVHRiTGKXuMqGgtl',	'8',	'2017',	4242),
+(18,	20,	'adnan',	'liaqat',	NULL,	15.00,	20,	'0000-00-00 00:00:00',	'0000-00-00 00:00:00',	'ch_1AtcJtLrCVHRiTGKGbtUpgeM',	'txn_1AtcJtLrCVHRiTGK4rz6ot44',	'8',	'2017',	5556),
+(19,	20,	'adnan',	'liaqat',	NULL,	15.00,	20,	'0000-00-00 00:00:00',	'0000-00-00 00:00:00',	'ch_1AtcMPLrCVHRiTGKS3XSF9Lz',	'txn_1AtcMPLrCVHRiTGK0pbudDsN',	'8',	'2017',	4444),
+(20,	20,	'adnan',	'liaqat',	NULL,	15.00,	20,	'0000-00-00 00:00:00',	'0000-00-00 00:00:00',	'ch_1AtcOsLrCVHRiTGKy8CCTkAk',	'txn_1AtcOtLrCVHRiTGKkgSHCI6w',	'8',	'2017',	4444),
+(21,	20,	'adnan',	'liaqat',	NULL,	12.00,	20,	'0000-00-00 00:00:00',	'0000-00-00 00:00:00',	'ch_1AtemBLrCVHRiTGKKUVhHXJ1',	'txn_1AtemCLrCVHRiTGKcJFpyO8B',	'8',	'2017',	4242),
+(22,	20,	'adnan',	'liaqat',	NULL,	23.00,	20,	'0000-00-00 00:00:00',	'0000-00-00 00:00:00',	'ch_1AteudLrCVHRiTGKwuNiJD8f',	'txn_1AteudLrCVHRiTGKkVT3Rv8C',	'8',	'2017',	4242),
+(23,	20,	'adnan',	'liaqat',	NULL,	56.00,	20,	'0000-00-00 00:00:00',	'0000-00-00 00:00:00',	'ch_1AtewOLrCVHRiTGKFBRIOFnv',	'txn_1AtewOLrCVHRiTGKTGb5mvU6',	'8',	'2017',	4242),
+(24,	1,	'adnan',	'liaqat',	NULL,	434.00,	20,	'2017-08-23 17:39:49',	'0000-00-00 00:00:00',	'ch_1Aty9ALrCVHRiTGKTXrU8wr3',	'txn_1Aty9ALrCVHRiTGKhFVbx5iX',	'8',	'2017',	5904),
+(25,	1,	'adnan',	'liaqat',	NULL,	100.00,	20,	'2017-08-23 17:46:54',	'0000-00-00 00:00:00',	'ch_1AtyG1LrCVHRiTGKeEMjBzGm',	'txn_1AtyG1LrCVHRiTGKEXBQUZhP',	'8',	'2017',	5904),
+(26,	20,	'adnan',	'liaqat',	NULL,	100.00,	20,	'2017-08-23 21:39:00',	'0000-00-00 00:00:00',	'ch_1Au1sdLrCVHRiTGKigY8HgdN',	'txn_1Au1sdLrCVHRiTGK1EkV93X2',	'9',	'2017',	1111),
+(27,	20,	'adnan',	'liaqat ali',	NULL,	100.00,	20,	'2017-08-23 21:59:42',	'2017-08-24 04:53:24',	'ch_1Au2CgLrCVHRiTGKGX9QtaaD',	'txn_1Au2CgLrCVHRiTGK6AcyF9SK',	'11',	'2017',	1111),
+(28,	NULL,	'Rumman',	'Chughtai',	NULL,	20.00,	27,	'2017-08-24 22:31:52',	'0000-00-00 00:00:00',	'ch_1AuPBKLrCVHRiTGKcgsx767R',	'txn_1AuPBKLrCVHRiTGKIUlKNF47',	'9',	'2017',	1111),
+(29,	NULL,	'Maan',	'Maan',	NULL,	100.00,	26,	'2017-08-24 23:00:24',	'0000-00-00 00:00:00',	'ch_1AuPcwLrCVHRiTGKNJSjDLp0',	'txn_1AuPcwLrCVHRiTGKsJCnrmMx',	'8',	'2017',	1111),
+(30,	20,	'Maan',	'Maan',	NULL,	1222.00,	22,	'2017-08-25 10:54:40',	'0000-00-00 00:00:00',	'ch_1AuamBLrCVHRiTGKF5oqZ9dt',	'txn_1AuamBLrCVHRiTGKbCi0q9i6',	'8',	'2017',	1111),
+(31,	20,	'maa',	'maan',	NULL,	12.00,	24,	'2017-08-25 14:22:03',	'0000-00-00 00:00:00',	'ch_1Aue0sLrCVHRiTGKoTXLEpMB',	'txn_1Aue0sLrCVHRiTGKZWku9SGB',	'8',	'2017',	1111),
+(32,	20,	'maan',	'maan',	NULL,	38.00,	24,	'2017-08-25 14:52:07',	'0000-00-00 00:00:00',	'ch_1AueTzLrCVHRiTGKO8CKqbVN',	'txn_1AueTzLrCVHRiTGKsmfE4ZPR',	'11',	'2017',	1111),
+(33,	20,	'maan',	'maan',	NULL,	599.00,	21,	'2017-08-25 14:57:24',	'0000-00-00 00:00:00',	'ch_1AueZ5LrCVHRiTGKgaQ8CnTF',	'txn_1AueZ6LrCVHRiTGKbLa7tus7',	'8',	'2017',	1111),
+(42,	NULL,	'maan',	'maan',	NULL,	7000.00,	19,	'2017-08-25 16:15:51',	'0000-00-00 00:00:00',	'ch_1Aufn1LrCVHRiTGKa1Qpqexs',	'txn_1Aufn1LrCVHRiTGKRDr0Dk5o',	'11',	'2017',	1111),
+(43,	NULL,	'maan',	'maan',	NULL,	1000.00,	19,	'2017-08-25 16:16:15',	'0000-00-00 00:00:00',	'ch_1AufnOLrCVHRiTGKspwr53dO',	'txn_1AufnOLrCVHRiTGKCRp5muYk',	'11',	'2017',	1111),
+(44,	NULL,	'mann',	'maan',	NULL,	1980.00,	27,	'2017-08-25 16:55:53',	'0000-00-00 00:00:00',	'ch_1AugPkLrCVHRiTGKBvhZ3dj2',	'txn_1AugPkLrCVHRiTGKT9fquNtx',	'11',	'2017',	1111),
+(45,	1,	'maan',	'maaan',	NULL,	1.00,	30,	'2017-08-26 19:18:22',	'0000-00-00 00:00:00',	'ch_1Av57BLrCVHRiTGKxtRFIzeR',	'txn_1Av57BLrCVHRiTGK3KMo5bzO',	'12',	'2017',	1111),
+(46,	1,	'maan',	'maan',	NULL,	100.00,	31,	'2017-08-26 19:28:37',	'0000-00-00 00:00:00',	'ch_1Av5H7LrCVHRiTGKC9Nmc8Kx',	'txn_1Av5H7LrCVHRiTGKL0rVQFmI',	'11',	'2017',	1111),
+(47,	1,	'maan',	'maan',	NULL,	100.00,	31,	'2017-08-26 19:28:55',	'0000-00-00 00:00:00',	'ch_1Av5HOLrCVHRiTGKkZ4exyH4',	'txn_1Av5HOLrCVHRiTGK97BKsUkF',	'11',	'2017',	1111),
+(48,	NULL,	'maan',	'maan',	NULL,	1000.00,	19,	'2017-08-26 23:30:38',	'0000-00-00 00:00:00',	'ch_1Av93KLrCVHRiTGKGsrY7u2o',	'txn_1Av93KLrCVHRiTGKr3BFGKNX',	'9',	'2017',	1111),
+(49,	NULL,	'maan',	'maaa',	NULL,	1.00,	30,	'2017-08-27 11:41:17',	'0000-00-00 00:00:00',	'ch_1AvKSOLrCVHRiTGKw9fQSA9r',	'txn_1AvKSOLrCVHRiTGKx5xroHdv',	'11',	'2017',	1111),
+(50,	1,	'ASDASDn',	'n,mn\'\"m,n',	NULL,	198.00,	30,	'2017-08-28 18:19:34',	'0000-00-00 00:00:00',	'ch_1Avn9NLrCVHRiTGKNQDkaEpe',	'txn_1Avn9OLrCVHRiTGKhwPYoPlK',	'12',	'2017',	1111),
+(51,	1,	'maan',	'maan',	'rumman@mangocoders.com',	20.00,	39,	'2017-08-29 18:25:19',	'0000-00-00 00:00:00',	'ch_1Aw9iTLrCVHRiTGK1E9F7D6t',	'txn_1Aw9iULrCVHRiTGKuUBd8DNO',	'11',	'2017',	1111),
+(52,	1,	'rumman',	'chughtai',	'rummanchughtai@hotmail.com',	20.00,	38,	'2017-08-30 01:26:08',	'0000-00-00 00:00:00',	'ch_1AwGHkLrCVHRiTGK7Nahb1sC',	'txn_1AwGHkLrCVHRiTGKm269bZzT',	'9',	'2017',	1111),
+(53,	1,	'maan',	'maan',	'rummanchughtai@hotmail.com',	20.00,	38,	'2017-08-30 01:27:21',	'0000-00-00 00:00:00',	'ch_1AwGIvLrCVHRiTGK5085tvFR',	'txn_1AwGIvLrCVHRiTGKT3nEOkCJ',	'11',	'2017',	1111);
+
+DROP TABLE IF EXISTS `email_template`;
+CREATE TABLE `email_template` (
+  `email_template_id` int(11) NOT NULL AUTO_INCREMENT,
+  `template_name` varchar(255) NOT NULL,
+  `template_subject` varchar(255) NOT NULL,
+  `template_type` enum('newsletter','website') NOT NULL,
+  `text_body` text NOT NULL,
+  `html_body` text NOT NULL,
+  `from_name` varchar(255) NOT NULL,
+  `from_email` varchar(255) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime DEFAULT NULL,
+  `created_by` int(11) NOT NULL,
+  PRIMARY KEY (`email_template_id`),
+  KEY `created_by` (`created_by`),
+  CONSTRAINT `email_template_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `email_template` (`email_template_id`, `template_name`, `template_subject`, `template_type`, `text_body`, `html_body`, `from_name`, `from_email`, `date_created`, `date_updated`, `created_by`) VALUES
+(1,	'as',	'New tempelate',	'newsletter',	'asdasdas',	'<p><strong>asdasd121321</strong></p>\r\n<p>[firstname]</p>\r\n<p>[lastname]</p>\r\n<p>[email]</p>',	'Rumman',	'rumman@hotmail.com',	'2017-08-02 16:20:56',	'2017-08-29 23:31:38',	1),
+(2,	'ssss',	'New tempelate',	'website',	'ass\r\n<p>[firstname]</p>\r\n<p>[lastname]</p>\r\n<p>[email]</p>',	'ssss',	'Rumman',	'rumman@hotmail.com',	'2017-08-02 16:29:47',	'2017-08-29 23:31:38',	1),
+(3,	'New',	'New tempelate',	'newsletter',	'asdas',	'asda\r\n<p>[firstname]</p>\r\n<p>[lastname]</p>\r\n<p>[email]</p>',	'asdasd',	'rumman@hotmail.com',	'2017-08-02 16:30:50',	'2017-08-29 23:31:38',	1),
+(4,	'asdasd',	'asdasd',	'newsletter',	'asdasd',	'<p>asdasd</p>\r\n<p>[firstname]</p>\r\n<p>[lastname]</p>\r\n<p>[email]</p>',	'asdasd',	'asdsdssss',	'2017-08-02 16:44:05',	'2017-08-29 23:31:38',	1),
+(5,	'asasas',	'asassa',	'newsletter',	'asassa',	'<p><img alt=\"sad\" src=\"http://localhost/twelve4twelve/r/ckeditor/plugins/smiley/images/sad_smile.png\" style=\"height:23px; width:23px\" title=\"sad\" />asassa</p>\r\n<p>[firstname]</p>\r\n<p>[lastname]</p>\r\n<p>[email]</p>',	'asasas',	'asdsd',	'2017-08-02 16:49:02',	'2017-08-29 23:31:38',	1),
+(6,	'sss',	'sss',	'newsletter',	'sss',	'sss\r\n<p>[firstname]</p>\r\n<p>[lastname]</p>\r\n<p>[email]</p>',	'sss',	'sssss',	'2017-08-02 16:51:21',	'2017-08-29 23:31:38',	1),
+(7,	'sssssassssasas',	'ssssssss',	'newsletter',	'sssssssss',	'<p>dddd</p>\r\n<p>[firstname]</p>\r\n<p>[lastname]</p>\r\n<p>[email]</p>',	'Rumman',	'rumman@hotmail.com',	'2017-08-03 10:36:09',	'2017-08-29 23:31:38',	1),
+(8,	'New1',	'new1',	'newsletter',	'aaaa',	'<table class=\"body-wrap\">\r\n	<tbody>\r\n		<tr>\r\n			<td>&nbsp;</td>\r\n			<td>\r\n			<div class=\"content\">\r\n			<table cellpadding=\"0\" cellspacing=\"0\" class=\"main\" style=\"width:100%\">\r\n				<tbody>\r\n					<tr>\r\n						<td>\r\n						<p>[firstname]</p>\r\n						</td>\r\n					</tr>\r\n					<tr>\r\n						<td>\r\n						<p>[lastname]</p>\r\n						</td>\r\n					</tr>\r\n					<tr>\r\n						<td>\r\n						<p>[email]</p>\r\n						</td>\r\n					</tr>\r\n				</tbody>\r\n			</table>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n',	'Rumman',	'rummanchughtai@hotmail.com',	'2017-08-29 17:56:18',	'2017-08-30 01:39:39',	1),
+(9,	'Reset Password Confirmation Code',	'Confirmation Code',	'website',	'Confirmation Code',	'<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n <head>\r\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n  <title>Forget Password Email Template</title>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\r\n  <style>\r\n  	.wrapper {\r\n  		width: 100%;\r\n  		max-width: 600px;\r\n  		margin-left: auto;\r\n  		margin-right: auto;\r\n  	}\r\n  </style>\r\n</head>\r\n<body style=\"margin: 0; padding: 0;\">\r\n	<div class=\"wrapper\">\r\n <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"border-collapse: collapse;\">\r\n <tr>\r\n  <td bgcolor=\"#e7edf3\">\r\n   <table>\r\n   	<tr>\r\n   		<td align=\"center\" bgcolor=\"#e7edf3\" width=\"100%\" style=\"padding: 10px 30px 10px 30px;\">\r\n <img src=\"[base_url]r/images/logo.png\" alt=\"12for12.org\" width=\"100%\" height=\"93px\" style=\"display: inline-block;\" />\r\n</td>\r\n   	</tr>\r\n   </table>\r\n  </td>\r\n </tr>\r\n <tr>\r\n  <td bgcolor=\"#ffffff\" style=\"padding: 40px 30px 40px 30px;\">\r\n <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\r\n <tr>\r\n  <td style=\"color: #153643; font-family: Arial, sans-serif; font-size: 24px;\">\r\n <b>Hi! <span>[firstname] [lastname],</span></b>\r\n</td>\r\n </tr>\r\n <tr>\r\n  <td style=\"padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;\">\r\n   		You have received this email because a password reset code request for your account was received.\r\n  </td>\r\n </tr>\r\n <tr>\r\n  <td style=\"padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;\">\r\n   		<!-- Click the button below to reset your password: -->\r\n   		Copy the confirmation code below\r\n  </td>\r\n </tr>\r\n <tr>\r\n  <td>\r\n   <!-- <input type=\"submit\" value=\"Reset Password\" style=\"padding: 20px 30px 20px 30px; background-color: #1e6bb5; border: none; color: #ffffff; cursor: pointer; font-size: 20px; text-transform: uppercase;\" /> -->\r\n  <h1 >[confirmationcode]</h1>\r\n  </td>\r\n </tr>\r\n <tr>\r\n  <td style=\"padding: 30px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;\">\r\n   		If you did not request a password reset confirmation code, no further action is required on your part. just ignore this email.\r\n  </td>\r\n </tr>\r\n</table>\r\n</td>\r\n </tr>\r\n <tr>\r\n\r\n   		<td bgcolor=\"#666666\" style=\"padding: 18px 30px 18px 30px;\">\r\n <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\r\n <tr align=\"center\">\r\n  <td style=\"color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;\">\r\n &copy; Copyrights 2017 All rights Reserved by 12for12\r\n</td>\r\n </tr>\r\n <tr align=\"center\">\r\n 	<td style=\"color: #ffffff; font-family: Arial, sans-serif; font-size: 14px; padding: 10px 0 0;\">\r\n <a href=\"#\" style=\"color: #ffffff; text-decoration: none;\"><font color=\"#ffffff\">Privacy Policy</font></a><span> | </span>\r\n <a href=\"#\" style=\"color: #ffffff; text-decoration: none;\"><font color=\"#ffffff\">About Us</font></a><span> | </span>\r\n <a href=\"#\" style=\"color: #ffffff; text-decoration: none;\"><font color=\"#ffffff\">Contact Us</font></a>\r\n 	</td>\r\n </tr>\r\n</table>\r\n</td>\r\n\r\n </tr>\r\n</table>\r\n</div>\r\n</body>\r\n</html>',	'12for12',	'rumman@mangocoders.com',	'2017-08-30 09:43:17',	'2017-08-30 13:25:57',	1),
+(10,	'Verify Email Address',	'Verify Email',	'website',	'Verify email address for registered users',	'<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n <head>\r\n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n  <title>Registration Successful Email Template</title>\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\r\n  <style>\r\n  	.wrapper {\r\n  		width: 100%;\r\n  		max-width: 600px;\r\n  		margin-left: auto;\r\n  		margin-right: auto;\r\n  	}\r\n  </style>\r\n</head>\r\n<body style=\"margin: 0; padding: 0;\">\r\n	<div class=\"wrapper\">\r\n <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"border-collapse: collapse;\">\r\n <tr>\r\n  <td bgcolor=\"#e7edf3\">\r\n   <table>\r\n   	<tr>\r\n   		<td align=\"center\" bgcolor=\"#e7edf3\" width=\"100%\" style=\"padding: 10px 30px 10px 30px;\">\r\n <img src=\"[base_url]r/images/logo.png\" alt=\"12for12.org\" width=\"100%\" height=\"93px\" style=\"display: inline-block;\" />\r\n</td>\r\n   	</tr>\r\n   </table>\r\n  </td>\r\n </tr>\r\n <tr>\r\n  <td bgcolor=\"#ffffff\" style=\"padding: 40px 30px 40px 30px;\">\r\n <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\r\n <tr>\r\n  <td style=\"color: #153643; font-family: Arial, sans-serif; font-size: 30px; text-transform: uppercase;\">\r\n <b>Registration Successful</span></b>\r\n</td>\r\n\r\n <tr>\r\n  <td style=\"padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;\">\r\n   		Hi, [firstname] [lastname], thanks for registering with us, pleas click the button below to complete the registration process.\r\n  </td>\r\n </tr>\r\n <tr>\r\n  <td>\r\n   <a href=\"[verify_email_link]\"><input type=\"submit\" value=\"Confirm Registration\" style=\"padding: 20px 30px 20px 30px; background-color: #1e6bb5; border: none; color: #ffffff; cursor: pointer; font-size: 20px; text-transform: uppercase;\" /></a>\r\n  </td>\r\n </tr>\r\n <tr>\r\n  <td style=\"padding: 30px 0 10px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;\">\r\n   		Or sign in using this link\r\n  </td>\r\n </tr>\r\n <tr>\r\n  <td style=\"padding: 10px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;\">\r\n   		<a href=\"[verify_email_link]\" style=\"color: #1e6bb5\">[verify_email_link]</a>\r\n  </td>\r\n </tr>\r\n</table>\r\n</td>\r\n </tr>\r\n <tr>\r\n\r\n   		<td bgcolor=\"#666666\" style=\"padding: 18px 30px 18px 30px;\">\r\n <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\r\n <tr align=\"center\">\r\n  <td style=\"color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;\">\r\n &copy; Copyrights 2017 All rights Reserved by 12for12\r\n</td>\r\n </tr>\r\n <tr align=\"center\">\r\n 	<td style=\"color: #ffffff; font-family: Arial, sans-serif; font-size: 14px; padding: 10px 0 0;\">\r\n <a href=\"#\" style=\"color: #ffffff; text-decoration: none;\"><font color=\"#ffffff\">Privacy Policy</font></a><span> | </span>\r\n <a href=\"#\" style=\"color: #ffffff; text-decoration: none;\"><font color=\"#ffffff\">About Us</font></a><span> | </span>\r\n <a href=\"#\" style=\"color: #ffffff; text-decoration: none;\"><font color=\"#ffffff\">Contact Us</font></a>\r\n 	</td>\r\n </tr>\r\n</table>\r\n</td>\r\n\r\n </tr>\r\n</table>\r\n</div>\r\n</body>\r\n</html>',	'Rumman',	'rumman@mangocoders.com',	'2017-08-30 13:23:14',	'2017-08-30 13:26:38',	1),
+(11,	'Story Updates Tempelate',	'Story Updates',	'website',	'Story Updates Tempelates for registered users',	'<!doctype html>\r\n<html>\r\n  <head>\r\n    <meta name=\"viewport\" content=\"width=device-width\">\r\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n    <title>Simple Transactional Email</title>\r\n    <style>\r\n    /* -------------------------------------\r\n        INLINED WITH htmlemail.io/inline\r\n    ------------------------------------- */\r\n    /* -------------------------------------\r\n        RESPONSIVE AND MOBILE FRIENDLY STYLES\r\n    ------------------------------------- */\r\n    @media only screen and (max-width: 620px) {\r\n      table[class=body] h1 {\r\n        font-size: 28px !important;\r\n        margin-bottom: 10px !important;\r\n      }\r\n      table[class=body] p,\r\n            table[class=body] ul,\r\n            table[class=body] ol,\r\n            table[class=body] td,\r\n            table[class=body] span,\r\n            table[class=body] a {\r\n        font-size: 16px !important;\r\n      }\r\n      table[class=body] .wrapper,\r\n            table[class=body] .article {\r\n        padding: 10px !important;\r\n      }\r\n      table[class=body] .content {\r\n        padding: 0 !important;\r\n      }\r\n      table[class=body] .container {\r\n        padding: 0 !important;\r\n        width: 100% !important;\r\n      }\r\n      table[class=body] .main {\r\n        border-left-width: 0 !important;\r\n        border-radius: 0 !important;\r\n        border-right-width: 0 !important;\r\n      }\r\n      table[class=body] .btn table {\r\n        width: 100% !important;\r\n      }\r\n      table[class=body] .btn a {\r\n        width: 100% !important;\r\n      }\r\n      table[class=body] .img-responsive {\r\n        height: auto !important;\r\n        max-width: 100% !important;\r\n        width: auto !important;\r\n      }\r\n    }\r\n\r\n    /* -------------------------------------\r\n        PRESERVE THESE STYLES IN THE HEAD\r\n    ------------------------------------- */\r\n    @media all {\r\n      .ExternalClass {\r\n        width: 100%;\r\n      }\r\n      .ExternalClass,\r\n            .ExternalClass p,\r\n            .ExternalClass span,\r\n            .ExternalClass font,\r\n            .ExternalClass td,\r\n            .ExternalClass div {\r\n        line-height: 100%;\r\n      }\r\n      .apple-link a {\r\n        color: inherit !important;\r\n        font-family: inherit !important;\r\n        font-size: inherit !important;\r\n        font-weight: inherit !important;\r\n        line-height: inherit !important;\r\n        text-decoration: none !important;\r\n      }\r\n      .btn-primary table td:hover {\r\n        background-color: #34495e !important;\r\n      }\r\n      .btn-primary a:hover {\r\n        background-color: #34495e !important;\r\n        border-color: #34495e !important;\r\n      }\r\n    }\r\n    </style>\r\n  </head>\r\n  <body class=\"\" style=\"background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;\">\r\n    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"body\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;\">\r\n      <tr>\r\n        <td style=\"font-family: sans-serif; font-size: 14px; vertical-align: top;\">&nbsp;</td>\r\n        <td class=\"container\" style=\"font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; Margin: 0 auto; max-width: 580px; padding: 10px; width: 580px;\">\r\n          <div class=\"content\" style=\"box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;\">\r\n\r\n            <!-- START CENTERED WHITE CONTAINER -->\r\n            <span class=\"preheader\" style=\"color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;\">This is preheader text. Some clients will show this text as a preview.</span>\r\n            <table class=\"main\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;\">\r\n\r\n              <!-- START MAIN CONTENT AREA -->\r\n              <tr>\r\n                <td class=\"wrapper\" style=\"font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;\">\r\n                  <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;\">\r\n                    <tr>\r\n                      <td style=\"font-family: sans-serif; font-size: 14px; vertical-align: top;\">\r\n                        <p style=\"font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;\">Hi there,</p>\r\n                        <p>Story Name: [story_name], Fundraising target: [fundraising_target], Donation Amount: [donation_amount] </p>\r\n                        <p style=\"font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;\">Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>\r\n                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"btn btn-primary\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;\">\r\n                          <tbody>\r\n                            <tr>\r\n                              <td align=\"left\" style=\"font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;\">\r\n                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;\">\r\n                                  <tbody>\r\n                                    <tr>\r\n                                      <td style=\"font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #3498db; border-radius: 5px; text-align: center;\"> <a href=\"http://htmlemail.io\" target=\"_blank\" style=\"display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;\">Call To Action</a> </td>\r\n                                    </tr>\r\n                                  </tbody>\r\n                                </table>\r\n                              </td>\r\n                            </tr>\r\n                          </tbody>\r\n                        </table>\r\n                        <p style=\"font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;\">This is a really simple email template. Its sole purpose is to get the recipient to click the button with no distractions.</p>\r\n                        <p style=\"font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;\">Good luck! Hope it works.</p>\r\n                      </td>\r\n                    </tr>\r\n                  </table>\r\n                </td>\r\n              </tr>\r\n\r\n            <!-- END MAIN CONTENT AREA -->\r\n            </table>\r\n\r\n            <!-- START FOOTER -->\r\n            <div class=\"footer\" style=\"clear: both; Margin-top: 10px; text-align: center; width: 100%;\">\r\n              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;\">\r\n                <tr>\r\n                  <td class=\"content-block\" style=\"font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;\">\r\n                    <span class=\"apple-link\" style=\"color: #999999; font-size: 12px; text-align: center;\">Company Inc, 3 Abbey Road, San Francisco CA 94102</span>\r\n                    <br> Don\'t like these emails? <a href=\"http://i.imgur.com/CScmqnj.gif\" style=\"text-decoration: underline; color: #999999; font-size: 12px; text-align: center;\">Unsubscribe</a>.\r\n                  </td>\r\n                </tr>\r\n                <tr>\r\n                  <td class=\"content-block powered-by\" style=\"font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;\">\r\n                    Powered by <a href=\"http://htmlemail.io\" style=\"color: #999999; font-size: 12px; text-align: center; text-decoration: none;\">HTMLemail</a>.\r\n                  </td>\r\n                </tr>\r\n              </table>\r\n            </div>\r\n            <!-- END FOOTER -->\r\n\r\n          <!-- END CENTERED WHITE CONTAINER -->\r\n          </div>\r\n        </td>\r\n        <td style=\"font-family: sans-serif; font-size: 14px; vertical-align: top;\">&nbsp;</td>\r\n      </tr>\r\n    </table>\r\n  </body>\r\n</html>\r\n',	'Rumman',	'rumman@mangocoders.com',	'2017-08-30 13:58:41',	NULL,	1);
+
+DROP TABLE IF EXISTS `group_permissions`;
+CREATE TABLE `group_permissions` (
+  `group_id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_name` varchar(255) NOT NULL,
+  `group_status` enum('active','inactive','delete') NOT NULL DEFAULT 'active',
+  `date_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `date_updated` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `group_permissions` (`group_id`, `group_name`, `group_status`, `date_created`, `date_updated`) VALUES
+(1,	'Group 1',	'active',	'2017-08-30 14:38:11',	'2017-08-30 14:38:11');
+
+DROP TABLE IF EXISTS `group_permission_details`;
+CREATE TABLE `group_permission_details` (
+  `group_permission_detail_id` int(11) NOT NULL AUTO_INCREMENT,
+  `group_id` int(11) NOT NULL,
+  `panel_id` int(11) NOT NULL,
+  `panel_permission` varchar(4) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime DEFAULT NULL,
+  PRIMARY KEY (`group_permission_detail_id`),
+  KEY `panel_id` (`panel_id`),
+  KEY `group_id` (`group_id`),
+  CONSTRAINT `group_permission_details_ibfk_1` FOREIGN KEY (`panel_id`) REFERENCES `panels` (`panel_id`),
+  CONSTRAINT `group_permission_details_ibfk_2` FOREIGN KEY (`group_id`) REFERENCES `group_permissions` (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `group_permission_details` (`group_permission_detail_id`, `group_id`, `panel_id`, `panel_permission`, `date_created`, `date_updated`) VALUES
+(1,	1,	1,	'all',	'0000-00-00 00:00:00',	'2017-08-30 14:38:12'),
+(2,	1,	2,	'all',	'0000-00-00 00:00:00',	'2017-08-30 14:38:12'),
+(3,	1,	4,	'all',	'0000-00-00 00:00:00',	'2017-08-30 14:38:12'),
+(4,	1,	5,	'all',	'0000-00-00 00:00:00',	'2017-08-30 14:38:12'),
+(5,	1,	7,	'all',	'0000-00-00 00:00:00',	'2017-08-30 14:38:12'),
+(6,	1,	8,	'all',	'0000-00-00 00:00:00',	'2017-08-30 14:38:12');
+
+DROP TABLE IF EXISTS `landing`;
+CREATE TABLE `landing` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `date_created` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `landing` (`id`, `email`, `date_created`) VALUES
+(1,	'rumman@hotmail.com',	'2017-08-15 15:01:08'),
+(2,	'rumman@hotmail.com',	'2017-08-15 15:02:36'),
+(3,	'rumman@hotmail.com',	'2017-08-15 15:03:53');
+
+DROP TABLE IF EXISTS `login_activities`;
+CREATE TABLE `login_activities` (
+  `login_activities_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(255) NOT NULL,
+  `login_activities_login_status` enum('0','1') NOT NULL DEFAULT '0',
+  `login_activities_loggedin_datetime` datetime NOT NULL,
+  `login_activities_ip` varchar(255) NOT NULL,
+  `login_attempt_status` varchar(255) NOT NULL,
+  PRIMARY KEY (`login_activities_id`),
+  KEY `user_id` (`user_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `login_activities` (`login_activities_id`, `user_name`, `login_activities_login_status`, `login_activities_loggedin_datetime`, `login_activities_ip`, `login_attempt_status`) VALUES
+(1,	'Rumman',	'1',	'2017-08-07 09:25:14',	'127.0.0.1',	'Success'),
+(2,	'Rumman',	'1',	'2017-08-07 13:22:52',	'127.0.0.1',	'Success'),
+(3,	'Rumman',	'0',	'2017-08-07 13:34:44',	'127.0.0.1',	'Faliure'),
+(4,	'Rumman',	'1',	'2017-08-07 13:34:50',	'127.0.0.1',	'Success'),
+(5,	'Rumman',	'1',	'2017-08-07 15:06:05',	'127.0.0.1',	'Success'),
+(6,	'Rumman',	'1',	'2017-08-07 15:48:13',	'127.0.0.1',	'Success'),
+(7,	'Rumman',	'1',	'2017-08-07 15:55:47',	'127.0.0.1',	'Success'),
+(8,	'uzair',	'0',	'2017-08-07 17:06:48',	'127.0.0.1',	'Faliure'),
+(9,	'uzair',	'1',	'2017-08-07 17:08:23',	'127.0.0.1',	'Success'),
+(10,	'umer',	'1',	'2017-08-07 17:10:28',	'127.0.0.1',	'Success'),
+(11,	'umer',	'1',	'2017-08-07 17:11:10',	'127.0.0.1',	'Success'),
+(12,	'Rumman',	'0',	'2017-08-07 17:11:35',	'127.0.0.1',	'Faliure'),
+(13,	'Rumman',	'0',	'2017-08-07 17:12:07',	'127.0.0.1',	'Faliure'),
+(14,	'uzair',	'1',	'2017-08-07 17:13:02',	'127.0.0.1',	'Success'),
+(15,	'umer',	'1',	'2017-08-07 17:14:02',	'127.0.0.1',	'Success'),
+(16,	'umer',	'1',	'2017-08-07 17:14:48',	'127.0.0.1',	'Success'),
+(17,	'uzair',	'1',	'2017-08-07 17:17:09',	'127.0.0.1',	'Success'),
+(18,	'umer',	'1',	'2017-08-07 17:18:37',	'127.0.0.1',	'Success'),
+(19,	'uzair',	'1',	'2017-08-07 17:21:28',	'127.0.0.1',	'Success'),
+(20,	'uzair',	'1',	'2017-08-07 18:58:37',	'127.0.0.1',	'Success'),
+(21,	'uzair',	'1',	'2017-08-07 19:24:17',	'127.0.0.1',	'Success'),
+(22,	'Rumman',	'0',	'2017-08-07 21:46:32',	'127.0.0.1',	'Faliure'),
+(23,	'uzair',	'1',	'2017-08-07 21:46:56',	'127.0.0.1',	'Success'),
+(24,	'Rumman',	'1',	'2017-08-07 22:26:44',	'127.0.0.1',	'Success'),
+(25,	'Rumman',	'0',	'2017-08-08 09:26:51',	'127.0.0.1',	'Faliure'),
+(26,	'Rumman',	'1',	'2017-08-08 09:26:59',	'127.0.0.1',	'Success'),
+(27,	'Rumman',	'1',	'2017-08-08 09:41:12',	'127.0.0.1',	'Success'),
+(28,	'Rumman',	'1',	'2017-08-08 14:45:42',	'127.0.0.1',	'Success'),
+(29,	'Rumman',	'1',	'2017-08-08 18:56:01',	'127.0.0.1',	'Success'),
+(30,	'Rumman',	'1',	'2017-08-08 20:55:19',	'127.0.0.1',	'Success'),
+(31,	'Rumman',	'1',	'2017-08-08 23:52:46',	'127.0.0.1',	'Success'),
+(32,	'Rumman',	'1',	'2017-08-09 09:42:11',	'127.0.0.1',	'Success'),
+(33,	'Rumman',	'1',	'2017-08-09 12:20:40',	'127.0.0.1',	'Success'),
+(34,	'umer',	'1',	'2017-08-09 12:22:54',	'127.0.0.1',	'Success'),
+(35,	'umer',	'1',	'2017-08-09 16:39:42',	'127.0.0.1',	'Success'),
+(36,	'umer',	'1',	'2017-08-09 22:19:39',	'127.0.0.1',	'Success'),
+(37,	'Rumman',	'1',	'2017-08-09 23:19:04',	'127.0.0.1',	'Success'),
+(38,	'Rumman',	'0',	'2017-08-10 09:35:38',	'127.0.0.1',	'Faliure'),
+(39,	'Rumman',	'1',	'2017-08-10 09:35:44',	'127.0.0.1',	'Success'),
+(40,	'umer',	'1',	'2017-08-10 10:13:57',	'127.0.0.1',	'Success'),
+(41,	'Rumman',	'1',	'2017-08-10 12:32:07',	'127.0.0.1',	'Success'),
+(42,	'Rumman',	'1',	'2017-08-10 12:37:53',	'127.0.0.1',	'Success'),
+(43,	'Rumman',	'1',	'2017-08-10 13:51:54',	'127.0.0.1',	'Success'),
+(44,	'Rumman',	'1',	'2017-08-10 15:43:07',	'127.0.0.1',	'Success'),
+(45,	'Rumman',	'1',	'2017-08-10 15:47:58',	'127.0.0.1',	'Success'),
+(46,	'Rumman',	'1',	'2017-08-10 16:00:59',	'127.0.0.1',	'Success'),
+(47,	'Rumman',	'1',	'2017-08-10 16:01:49',	'127.0.0.1',	'Success'),
+(48,	'Rumman',	'1',	'2017-08-10 16:02:29',	'127.0.0.1',	'Success'),
+(49,	'Rumman',	'1',	'2017-08-10 16:59:25',	'127.0.0.1',	'Success'),
+(50,	'Rumman',	'1',	'2017-08-10 17:27:28',	'127.0.0.1',	'Success'),
+(51,	'Rumman',	'1',	'2017-08-11 03:37:33',	'127.0.0.1',	'Success'),
+(52,	'Rumman',	'0',	'2017-08-11 03:39:22',	'127.0.0.1',	'Faliure'),
+(53,	'Rumman',	'0',	'2017-08-11 03:39:28',	'127.0.0.1',	'Faliure'),
+(54,	'Rumman',	'1',	'2017-08-11 03:39:34',	'127.0.0.1',	'Success'),
+(55,	'Rumman',	'1',	'2017-08-11 03:41:21',	'127.0.0.1',	'Success'),
+(56,	'Rumman',	'1',	'2017-08-11 03:47:20',	'127.0.0.1',	'Success'),
+(57,	'Rumman',	'1',	'2017-08-11 04:00:46',	'127.0.0.1',	'Success'),
+(58,	'Rumman',	'1',	'2017-08-13 19:01:40',	'127.0.0.1',	'Success'),
+(59,	'Rumman',	'0',	'2017-08-14 01:56:52',	'127.0.0.1',	'Faliure'),
+(60,	'Rumman',	'1',	'2017-08-14 01:56:58',	'127.0.0.1',	'Success'),
+(61,	'Rumman',	'1',	'2017-08-14 01:59:24',	'127.0.0.1',	'Success'),
+(62,	'Rumman',	'1',	'2017-08-14 02:00:35',	'127.0.0.1',	'Success'),
+(63,	'Rumman',	'1',	'2017-08-14 02:01:04',	'127.0.0.1',	'Success'),
+(64,	'Rumman',	'1',	'2017-08-14 13:40:53',	'127.0.0.1',	'Success'),
+(65,	'Rumman',	'1',	'2017-08-14 14:23:03',	'127.0.0.1',	'Success'),
+(66,	'Rumman',	'1',	'2017-08-14 14:30:32',	'127.0.0.1',	'Success'),
+(67,	'Rumman',	'1',	'2017-08-14 14:31:31',	'127.0.0.1',	'Success'),
+(68,	'Rumman',	'1',	'2017-08-14 14:59:07',	'127.0.0.1',	'Success'),
+(69,	'umer',	'1',	'2017-08-14 15:20:21',	'127.0.0.1',	'Success'),
+(70,	'Rumman',	'1',	'2017-08-14 15:27:15',	'127.0.0.1',	'Success'),
+(71,	'umer',	'1',	'2017-08-14 16:20:01',	'127.0.0.1',	'Success'),
+(72,	'Rumman',	'1',	'2017-08-14 16:20:14',	'127.0.0.1',	'Success'),
+(73,	'Rumman',	'1',	'2017-08-14 16:32:50',	'127.0.0.1',	'Success'),
+(74,	'Rumman',	'1',	'2017-08-14 21:40:06',	'127.0.0.1',	'Success'),
+(75,	'Rumman',	'0',	'2017-08-14 21:40:51',	'127.0.0.1',	'Faliure'),
+(76,	'Rumman',	'0',	'2017-08-14 21:46:34',	'127.0.0.1',	'Faliure'),
+(77,	'Rumman',	'1',	'2017-08-14 21:54:33',	'127.0.0.1',	'Success'),
+(78,	'Rumman',	'1',	'2017-08-14 22:23:02',	'127.0.0.1',	'Success'),
+(79,	'Rumman',	'1',	'2017-08-15 08:56:45',	'127.0.0.1',	'Success'),
+(80,	'Rumman',	'1',	'2017-08-15 10:40:43',	'127.0.0.1',	'Success'),
+(81,	'Rumman',	'1',	'2017-08-15 12:22:28',	'127.0.0.1',	'Success'),
+(82,	'Rumman',	'0',	'2017-08-15 13:24:08',	'127.0.0.1',	'Faliure'),
+(83,	'Rumman',	'0',	'2017-08-15 21:42:55',	'::1',	'Faliure'),
+(84,	'Rumman',	'0',	'2017-08-15 21:43:30',	'::1',	'Faliure'),
+(85,	'Rumman',	'0',	'2017-08-15 21:44:03',	'::1',	'Faliure'),
+(86,	'Rumman',	'0',	'2017-08-15 21:46:54',	'::1',	'Faliure'),
+(87,	'Rumman',	'0',	'2017-08-15 21:47:44',	'::1',	'Faliure'),
+(88,	'Rumman',	'0',	'2017-08-15 21:52:29',	'::1',	'Faliure'),
+(89,	'Rumman',	'0',	'2017-08-15 21:53:49',	'::1',	'Faliure'),
+(90,	'Rumman',	'0',	'2017-08-15 22:11:43',	'::1',	'Faliure'),
+(91,	'Rumman',	'0',	'2017-08-16 11:17:10',	'127.0.0.1',	'Faliure'),
+(92,	'Rumman',	'0',	'2017-08-16 11:17:41',	'127.0.0.1',	'Faliure'),
+(93,	'Rumman',	'1',	'2017-08-16 12:04:20',	'127.0.0.1',	'Success'),
+(94,	'Rumman',	'1',	'2017-08-16 13:32:23',	'127.0.0.1',	'Success'),
+(95,	'Rumman',	'0',	'2017-08-16 16:25:31',	'127.0.0.1',	'Faliure'),
+(96,	'Rumman',	'0',	'2017-08-16 16:26:42',	'127.0.0.1',	'Faliure'),
+(97,	'Rumman',	'0',	'2017-08-16 16:27:16',	'127.0.0.1',	'Faliure'),
+(98,	'Rumman',	'1',	'2017-08-16 18:13:57',	'127.0.0.1',	'Success'),
+(99,	'Rumman',	'1',	'2017-08-16 22:29:38',	'::1',	'Success'),
+(100,	'Rumman',	'0',	'2017-08-16 22:29:59',	'::1',	'Faliure'),
+(101,	'Rumman',	'0',	'2017-08-16 22:34:55',	'::1',	'Faliure'),
+(102,	'Rumman',	'0',	'2017-08-16 22:41:33',	'::1',	'Faliure'),
+(103,	'Rumman',	'0',	'2017-08-16 22:47:43',	'::1',	'Faliure'),
+(104,	'Rumman',	'0',	'2017-08-16 22:48:15',	'::1',	'Faliure'),
+(105,	'Rumman',	'1',	'2017-08-16 23:02:01',	'::1',	'Success'),
+(106,	'Rumman',	'0',	'2017-08-16 23:02:10',	'::1',	'Faliure'),
+(107,	'Rumman',	'0',	'2017-08-16 23:03:04',	'::1',	'Faliure'),
+(108,	'Rumman',	'0',	'2017-08-16 23:03:23',	'::1',	'Faliure'),
+(109,	'Rumman',	'0',	'2017-08-16 23:06:46',	'::1',	'Faliure'),
+(110,	'Rumman',	'0',	'2017-08-16 23:07:22',	'::1',	'Faliure'),
+(111,	'Rumman',	'1',	'2017-08-17 11:05:14',	'127.0.0.1',	'Success'),
+(112,	'Rumman',	'1',	'2017-08-17 13:13:40',	'127.0.0.1',	'Success'),
+(113,	'Rumman',	'1',	'2017-08-17 16:11:56',	'127.0.0.1',	'Success'),
+(114,	'Rumman',	'1',	'2017-08-17 16:57:46',	'127.0.0.1',	'Success'),
+(115,	'Rumman',	'0',	'2017-08-17 17:26:53',	'127.0.0.1',	'Faliure'),
+(116,	'Rumman',	'1',	'2017-08-17 18:04:09',	'127.0.0.1',	'Success'),
+(117,	'Rumman',	'0',	'2017-08-17 21:30:45',	'::1',	'Faliure'),
+(118,	'Rumman',	'1',	'2017-08-17 21:30:53',	'::1',	'Success'),
+(119,	'Rumman',	'1',	'2017-08-17 23:35:41',	'::1',	'Success'),
+(120,	'Rumman',	'1',	'2017-08-17 23:36:02',	'::1',	'Success'),
+(121,	'Rumman',	'1',	'2017-08-17 23:38:04',	'::1',	'Success'),
+(122,	'Rumman',	'1',	'2017-08-17 23:43:42',	'::1',	'Success'),
+(123,	'Rumman',	'1',	'2017-08-17 23:43:50',	'::1',	'Success'),
+(124,	'Rumman',	'1',	'2017-08-18 10:54:01',	'::1',	'Success'),
+(125,	'Rumman',	'1',	'2017-08-18 16:54:00',	'::1',	'Success'),
+(126,	'Rumman',	'1',	'2017-08-18 16:55:37',	'::1',	'Success'),
+(127,	'Rumman',	'1',	'2017-08-18 17:28:52',	'::1',	'Success'),
+(128,	'Asad',	'1',	'2017-08-18 17:29:44',	'::1',	'Success'),
+(129,	'Asad',	'1',	'2017-08-18 17:43:52',	'::1',	'Success'),
+(130,	'Asad',	'1',	'2017-08-18 17:44:15',	'::1',	'Success'),
+(131,	'Asad',	'1',	'2017-08-18 17:44:46',	'::1',	'Success'),
+(132,	'Rumman',	'1',	'2017-08-18 17:48:27',	'::1',	'Success'),
+(133,	'Asad',	'1',	'2017-08-18 17:49:23',	'::1',	'Success'),
+(134,	'Asad',	'1',	'2017-08-18 17:50:20',	'::1',	'Success'),
+(135,	'Asad',	'1',	'2017-08-18 17:50:48',	'::1',	'Success'),
+(136,	'Rumman',	'1',	'2017-08-18 17:51:46',	'::1',	'Success'),
+(137,	'Rumman',	'1',	'2017-08-18 17:51:54',	'::1',	'Success'),
+(138,	'Asad',	'1',	'2017-08-18 17:55:16',	'::1',	'Success'),
+(139,	'Asad',	'1',	'2017-08-18 17:56:24',	'::1',	'Success'),
+(140,	'Rumman',	'0',	'2017-08-18 17:56:37',	'::1',	'Faliure'),
+(141,	'Rumman',	'1',	'2017-08-18 18:50:02',	'::1',	'Success'),
+(142,	'Rumman',	'1',	'2017-08-18 18:52:17',	'::1',	'Success'),
+(143,	'Rumman',	'1',	'2017-08-18 19:15:33',	'::1',	'Success'),
+(144,	'Rumman',	'1',	'2017-08-18 19:51:10',	'::1',	'Success'),
+(145,	'Asad',	'1',	'2017-08-18 19:55:16',	'::1',	'Success'),
+(146,	'Asad',	'1',	'2017-08-18 19:55:36',	'::1',	'Success'),
+(147,	'Rumman',	'0',	'2017-08-19 22:39:08',	'127.0.0.1',	'Faliure'),
+(148,	'Rumman',	'1',	'2017-08-19 22:39:13',	'127.0.0.1',	'Success'),
+(149,	'Rumman',	'1',	'2017-08-19 22:48:36',	'::1',	'Success'),
+(150,	'Rumman',	'1',	'2017-08-20 15:24:36',	'::1',	'Success'),
+(151,	'Rumman',	'1',	'2017-08-21 12:40:34',	'::1',	'Success'),
+(152,	'Rumman',	'1',	'2017-08-21 15:36:43',	'::1',	'Success'),
+(153,	'Rumman',	'1',	'2017-08-21 15:45:07',	'::1',	'Success'),
+(154,	'Rumman',	'1',	'2017-08-22 11:56:41',	'::1',	'Success'),
+(155,	'adnan',	'1',	'2017-08-22 16:55:16',	'::1',	'Success'),
+(156,	'adnan',	'1',	'2017-08-22 16:56:43',	'::1',	'Success'),
+(157,	'adnan',	'1',	'2017-08-22 16:57:28',	'::1',	'Success'),
+(158,	'adnan',	'0',	'2017-08-23 00:01:29',	'::1',	'Faliure'),
+(159,	'adnan',	'1',	'2017-08-23 00:01:53',	'::1',	'Success'),
+(160,	'adnan',	'1',	'2017-08-23 00:03:02',	'::1',	'Success'),
+(161,	'adnan',	'1',	'2017-08-23 00:32:28',	'::1',	'Success'),
+(162,	'adnan',	'1',	'2017-08-23 00:33:39',	'::1',	'Success'),
+(163,	'adnan',	'1',	'2017-08-23 00:36:28',	'::1',	'Success'),
+(164,	'adnan',	'1',	'2017-08-23 00:36:41',	'::1',	'Success'),
+(165,	'Rumman',	'1',	'2017-08-23 00:36:53',	'::1',	'Success'),
+(166,	'Rumman',	'1',	'2017-08-23 00:39:53',	'::1',	'Success'),
+(167,	'adnan',	'1',	'2017-08-23 00:40:13',	'::1',	'Success'),
+(168,	'adnan',	'1',	'2017-08-23 00:41:48',	'::1',	'Success'),
+(169,	'adnan',	'1',	'2017-08-23 00:42:37',	'::1',	'Success'),
+(170,	'adnan',	'1',	'2017-08-23 00:43:04',	'::1',	'Success'),
+(171,	'adnan',	'1',	'2017-08-23 09:28:08',	'::1',	'Success'),
+(172,	'Rumman',	'1',	'2017-08-23 09:34:04',	'::1',	'Success'),
+(173,	'adnan',	'1',	'2017-08-23 09:34:18',	'::1',	'Success'),
+(174,	'adnan',	'1',	'2017-08-23 09:42:53',	'::1',	'Success'),
+(175,	'adnan',	'1',	'2017-08-23 09:43:23',	'::1',	'Success'),
+(176,	'Rumman',	'1',	'2017-08-23 09:43:31',	'::1',	'Success'),
+(177,	'adnan',	'1',	'2017-08-23 09:44:59',	'::1',	'Success'),
+(178,	'adnan',	'1',	'2017-08-23 09:53:47',	'::1',	'Success'),
+(179,	'Rumman',	'1',	'2017-08-23 09:55:39',	'::1',	'Success'),
+(180,	'Rumman',	'1',	'2017-08-23 10:05:19',	'::1',	'Success'),
+(181,	'adnan',	'1',	'2017-08-23 10:09:56',	'::1',	'Success'),
+(182,	'adnan',	'1',	'2017-08-23 12:24:29',	'::1',	'Success'),
+(183,	'adnan',	'1',	'2017-08-23 13:48:12',	'::1',	'Success'),
+(184,	'adnan',	'1',	'2017-08-23 14:07:51',	'::1',	'Success'),
+(185,	'adnan',	'1',	'2017-08-23 14:08:57',	'::1',	'Success'),
+(186,	'adnan',	'1',	'2017-08-23 14:10:43',	'::1',	'Success'),
+(187,	'adnan',	'1',	'2017-08-23 14:10:57',	'::1',	'Success'),
+(188,	'Rumman',	'1',	'2017-08-23 14:33:11',	'::1',	'Success'),
+(189,	'adnan',	'1',	'2017-08-23 19:56:06',	'::1',	'Success'),
+(190,	'Rumman',	'1',	'2017-08-23 20:04:39',	'::1',	'Success'),
+(191,	'Rumman',	'1',	'2017-08-23 20:10:21',	'::1',	'Success'),
+(192,	'adnan',	'1',	'2017-08-23 20:11:13',	'::1',	'Success'),
+(193,	'Rumman',	'1',	'2017-08-23 20:22:16',	'::1',	'Success'),
+(194,	'adnan',	'1',	'2017-08-23 20:26:43',	'::1',	'Success'),
+(195,	'adnan',	'1',	'2017-08-24 02:56:15',	'::1',	'Success'),
+(196,	'adnan',	'1',	'2017-08-24 03:00:42',	'::1',	'Success'),
+(197,	'adnan',	'1',	'2017-08-24 03:02:15',	'::1',	'Success'),
+(198,	'Rumman',	'1',	'2017-08-24 03:02:51',	'::1',	'Success'),
+(199,	'Rumman',	'1',	'2017-08-24 03:03:20',	'::1',	'Success'),
+(200,	'adnan',	'1',	'2017-08-24 03:05:18',	'::1',	'Success'),
+(201,	'adnan',	'1',	'2017-08-24 03:10:22',	'::1',	'Success'),
+(202,	'adnan',	'1',	'2017-08-24 03:13:27',	'::1',	'Success'),
+(203,	'adnan',	'1',	'2017-08-24 03:13:53',	'::1',	'Success'),
+(204,	'adnan',	'1',	'2017-08-24 03:15:33',	'::1',	'Success'),
+(205,	'adnan',	'1',	'2017-08-24 03:17:21',	'::1',	'Success'),
+(206,	'adnan',	'1',	'2017-08-24 03:17:59',	'::1',	'Success'),
+(207,	'adnan',	'1',	'2017-08-24 03:20:21',	'::1',	'Success'),
+(208,	'adnan',	'1',	'2017-08-24 03:21:04',	'::1',	'Success'),
+(209,	'adnan',	'1',	'2017-08-24 03:22:28',	'::1',	'Success'),
+(210,	'adnan',	'1',	'2017-08-24 03:24:28',	'::1',	'Success'),
+(211,	'adnan',	'1',	'2017-08-24 03:28:47',	'::1',	'Success'),
+(212,	'adnan',	'1',	'2017-08-24 03:29:35',	'::1',	'Success'),
+(213,	'adnan',	'1',	'2017-08-24 03:30:21',	'::1',	'Success'),
+(214,	'adnan',	'1',	'2017-08-24 03:39:19',	'::1',	'Success'),
+(215,	'adnan',	'1',	'2017-08-24 09:27:00',	'::1',	'Success'),
+(216,	'Rumman',	'1',	'2017-08-24 09:49:14',	'::1',	'Success'),
+(217,	'Rumman',	'1',	'2017-08-24 09:52:41',	'::1',	'Success'),
+(218,	'Rumman',	'1',	'2017-08-24 13:20:15',	'::1',	'Success'),
+(219,	'Rumman',	'1',	'2017-08-24 16:18:45',	'::1',	'Success'),
+(220,	'Rumman',	'1',	'2017-08-24 16:19:56',	'::1',	'Success'),
+(221,	'Rumman',	'1',	'2017-08-24 17:33:32',	'::1',	'Success'),
+(222,	'Rumman',	'1',	'2017-08-24 18:58:21',	'::1',	'Success'),
+(223,	'adnan',	'1',	'2017-08-24 19:34:53',	'::1',	'Success'),
+(224,	'Rumman',	'1',	'2017-08-25 09:17:01',	'::1',	'Success'),
+(225,	'Rumman',	'1',	'2017-08-25 09:17:07',	'::1',	'Success'),
+(226,	'adnan',	'1',	'2017-08-25 09:18:05',	'::1',	'Success'),
+(227,	'Rumman',	'1',	'2017-08-25 11:17:34',	'::1',	'Success'),
+(228,	'adnan',	'1',	'2017-08-25 11:18:53',	'::1',	'Success'),
+(229,	'Rumman',	'1',	'2017-08-25 15:31:42',	'::1',	'Success'),
+(230,	'Rumman',	'1',	'2017-08-25 20:47:06',	'::1',	'Success'),
+(231,	'Rumman',	'1',	'2017-08-25 21:29:32',	'::1',	'Success'),
+(232,	'Rumman',	'1',	'2017-08-26 14:05:53',	'::1',	'Success'),
+(233,	'Rumman',	'1',	'2017-08-26 18:37:04',	'::1',	'Success'),
+(234,	'Rumman',	'1',	'2017-08-26 22:59:39',	'::1',	'Success'),
+(235,	'Rumman',	'1',	'2017-08-26 23:31:19',	'::1',	'Success'),
+(236,	'Rumman',	'1',	'2017-08-27 13:26:58',	'::1',	'Success'),
+(237,	'Rumman',	'1',	'2017-08-27 13:34:11',	'::1',	'Success'),
+(238,	'Rumman',	'1',	'2017-08-27 14:42:24',	'::1',	'Success'),
+(239,	'Rumman',	'1',	'2017-08-27 14:54:03',	'::1',	'Success'),
+(240,	'Rumman',	'1',	'2017-08-28 10:35:44',	'::1',	'Success'),
+(241,	'Rumman',	'1',	'2017-08-28 16:46:01',	'::1',	'Success'),
+(242,	'Rumman',	'1',	'2017-08-28 16:54:44',	'::1',	'Success'),
+(243,	'Rumman',	'1',	'2017-08-28 18:32:59',	'::1',	'Success'),
+(244,	'Rumman',	'1',	'2017-08-28 21:29:09',	'::1',	'Success'),
+(245,	'Rumman',	'1',	'2017-08-29 00:51:24',	'::1',	'Success'),
+(246,	'Rumman',	'1',	'2017-08-29 09:21:10',	'::1',	'Success'),
+(247,	'Rumman',	'1',	'2017-08-29 17:02:14',	'::1',	'Success'),
+(248,	'Rumman',	'1',	'2017-08-29 17:07:58',	'::1',	'Success'),
+(249,	'Rumman',	'1',	'2017-08-30 00:09:29',	'::1',	'Success'),
+(250,	'Rumman',	'1',	'2017-08-30 09:17:10',	'::1',	'Success'),
+(251,	'Rumman',	'1',	'2017-08-30 13:01:29',	'::1',	'Success'),
+(252,	'Rumman',	'1',	'2017-08-30 13:11:28',	'::1',	'Success'),
+(253,	'Rumman',	'1',	'2017-08-30 13:28:03',	'::1',	'Success'),
+(254,	'Rumman',	'1',	'2017-08-30 13:53:35',	'::1',	'Success'),
+(255,	'hussain',	'0',	'2017-08-30 14:33:30',	'::1',	'Failure'),
+(256,	'hussain',	'0',	'2017-08-30 14:33:47',	'::1',	'Failure'),
+(257,	'Rumman',	'1',	'2017-08-30 14:33:51',	'::1',	'Success'),
+(258,	'Maaan',	'1',	'2017-08-30 14:34:50',	'::1',	'Success'),
+(259,	'Rumman',	'1',	'2017-08-30 14:37:41',	'::1',	'Success'),
+(260,	'Maaan',	'1',	'2017-08-30 14:38:35',	'::1',	'Success'),
+(261,	'Rumman',	'1',	'2017-08-30 14:56:51',	'::1',	'Success'),
+(262,	'Maaan',	'1',	'2017-08-30 14:57:02',	'::1',	'Success'),
+(263,	'Rumman',	'1',	'2017-08-30 15:09:30',	'::1',	'Success'),
+(264,	'Maaan',	'1',	'2017-08-30 15:22:34',	'::1',	'Success'),
+(265,	'Maaan',	'1',	'2017-08-30 15:28:22',	'::1',	'Success'),
+(266,	'Rumman',	'1',	'2017-08-30 15:33:10',	'::1',	'Success'),
+(267,	'Maaan',	'1',	'2017-08-30 15:33:21',	'::1',	'Success'),
+(268,	'Rumman',	'1',	'2017-08-30 15:37:33',	'::1',	'Success'),
+(269,	'Maaan',	'1',	'2017-08-30 15:49:32',	'::1',	'Success'),
+(270,	'Maaan',	'1',	'2017-08-30 15:53:27',	'::1',	'Success'),
+(271,	'Maaan',	'1',	'2017-08-30 15:55:47',	'::1',	'Success'),
+(272,	'Maaan',	'1',	'2017-08-30 15:55:53',	'::1',	'Success'),
+(273,	'Rumman',	'1',	'2017-08-30 23:43:10',	'::1',	'Success'),
+(274,	'Rumman',	'1',	'2017-08-31 00:20:27',	'::1',	'Success'),
+(275,	'Rumman',	'1',	'2017-08-31 13:18:49',	'::1',	'Success'),
+(276,	'Rumman',	'1',	'2017-08-31 16:32:49',	'::1',	'Success'),
+(277,	'Rumman',	'1',	'2017-08-31 17:27:26',	'::1',	'Success'),
+(278,	'Rumman',	'1',	'2017-08-31 17:28:08',	'::1',	'Success'),
+(279,	'Rumman',	'1',	'2017-08-31 20:18:34',	'::1',	'Success'),
+(280,	'Rumman',	'1',	'2017-08-31 20:26:44',	'::1',	'Success'),
+(281,	'Rumman',	'1',	'2017-09-06 09:18:35',	'::1',	'Success'),
+(282,	'Rumman',	'1',	'2017-09-06 10:41:41',	'::1',	'Success'),
+(283,	'Rumman',	'1',	'2017-09-06 10:50:09',	'::1',	'Success'),
+(284,	'Rumman',	'1',	'2017-09-08 17:57:02',	'::1',	'Success'),
+(285,	'Rumman',	'1',	'2017-09-16 19:29:01',	'::1',	'Success'),
+(286,	'Rumman',	'1',	'2017-09-20 15:21:17',	'::1',	'Success'),
+(287,	'Rumman',	'1',	'2017-09-20 22:00:28',	'::1',	'Success'),
+(288,	'Rumman',	'1',	'2017-09-21 09:23:53',	'::1',	'Success'),
+(289,	'Rumman',	'1',	'2017-09-21 13:41:04',	'::1',	'Success'),
+(290,	'Rumman',	'1',	'2017-09-21 17:51:01',	'::1',	'Success'),
+(291,	'Rumman',	'1',	'2017-09-22 22:56:58',	'::1',	'Success');
+
+DROP TABLE IF EXISTS `panels`;
+CREATE TABLE `panels` (
+  `panel_id` int(11) NOT NULL AUTO_INCREMENT,
+  `panel_name` varchar(255) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime DEFAULT NULL,
+  PRIMARY KEY (`panel_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `panels` (`panel_id`, `panel_name`, `date_created`, `date_updated`) VALUES
+(1,	'Categories',	'2017-08-24 13:02:29',	NULL),
+(2,	'Stories',	'2017-08-24 13:02:41',	NULL),
+(4,	'Templates',	'2017-08-24 13:07:39',	NULL),
+(5,	'Newsletters',	'2017-08-24 13:08:02',	NULL),
+(7,	'SEO',	'2017-08-30 14:37:12',	NULL),
+(8,	'Pages',	'2017-08-30 14:37:25',	NULL);
+
+DROP TABLE IF EXISTS `permissions`;
+CREATE TABLE `permissions` (
+  `permission_id` int(11) NOT NULL AUTO_INCREMENT,
+  `permission_type` varchar(255) NOT NULL,
+  PRIMARY KEY (`permission_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `permissions` (`permission_id`, `permission_type`) VALUES
+(1,	'view'),
+(2,	'modify');
+
+DROP TABLE IF EXISTS `resources`;
+CREATE TABLE `resources` (
+  `resource_id` int(11) NOT NULL AUTO_INCREMENT,
+  `story_id` int(11) NOT NULL,
+  `resource_type` varchar(255) DEFAULT NULL,
+  `resource_path` varchar(255) NOT NULL,
+  `resource_name` varchar(255) NOT NULL,
+  `resource_direct_url` varchar(255) DEFAULT NULL,
+  `created_by` int(11) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime NOT NULL,
+  PRIMARY KEY (`resource_id`),
+  KEY `story_id` (`story_id`),
+  KEY `resource_created_by` (`created_by`),
+  CONSTRAINT `resources_ibfk_1` FOREIGN KEY (`story_id`) REFERENCES `story` (`story_id`),
+  CONSTRAINT `resources_ibfk_2` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `resources` (`resource_id`, `story_id`, `resource_type`, `resource_path`, `resource_name`, `resource_direct_url`, `created_by`, `date_created`, `date_updated`) VALUES
+(13,	20,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'mult_cloud.png',	'',	1,	'2017-08-08 11:11:04',	'0000-00-00 00:00:00'),
+(14,	20,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'mobile.png',	'',	1,	'2017-08-08 11:11:05',	'0000-00-00 00:00:00'),
+(15,	21,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'python.jpg',	'',	1,	'2017-08-08 11:52:22',	'0000-00-00 00:00:00'),
+(16,	21,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'1502175142-twelve4twelve_1502175142673.jpeg',	'',	1,	'2017-08-08 11:52:22',	'0000-00-00 00:00:00'),
+(17,	22,	'video/mp4',	'/var/www/html/twelve4twelve/uploads/',	'aspnet.png',	'',	1,	'2017-08-08 14:50:09',	'0000-00-00 00:00:00'),
+(22,	24,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'1502189128-twelve4twelve_1502189128105.jpg',	'',	1,	'2017-08-08 15:45:28',	'0000-00-00 00:00:00'),
+(24,	28,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'1503317996-twelve4twelve_1503317996511.jpg',	'',	1,	'2017-08-21 17:19:56',	'0000-00-00 00:00:00'),
+(25,	30,	'video/mp4',	'/var/www/html/twelve4twelve/uploads/',	'1503676845-twelve4twelve_1503676845431.mp4',	'',	1,	'2017-08-25 21:00:45',	'0000-00-00 00:00:00'),
+(26,	31,	'video/mp4',	'/var/www/html/twelve4twelve/uploads/',	'1503676875-twelve4twelve_1503676875778.jpg',	'',	1,	'2017-08-25 21:01:16',	'0000-00-00 00:00:00'),
+(27,	31,	'video/mp4',	'/var/www/html/twelve4twelve/uploads/',	'1503676875-twelve4twelve_1503676875632.mp4',	'',	1,	'2017-08-25 21:01:16',	'0000-00-00 00:00:00'),
+(28,	31,	'video/mp4',	'/var/www/html/twelve4twelve/uploads/',	'1503677024-twelve4twelve_1503677024547.mp4',	NULL,	1,	'2017-08-25 21:03:45',	'0000-00-00 00:00:00'),
+(38,	33,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/',	'1503940387-twelve4twelve_1503940387984.png',	NULL,	1,	'2017-08-28 22:13:07',	'0000-00-00 00:00:00'),
+(44,	23,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/videos',	'ios.jpg',	NULL,	1,	'2017-08-29 10:51:28',	'0000-00-00 00:00:00'),
+(45,	23,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503985887-twelve4twelve_1503985887526.png',	NULL,	1,	'2017-08-29 10:51:28',	'0000-00-00 00:00:00'),
+(46,	23,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503985887-twelve4twelve_1503985887516.png',	NULL,	1,	'2017-08-29 10:51:28',	'0000-00-00 00:00:00'),
+(47,	23,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503985887-twelve4twelve_1503985887554.jpg',	NULL,	1,	'2017-08-29 10:51:28',	'0000-00-00 00:00:00'),
+(48,	23,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503985887-twelve4twelve_1503985887248.jpeg',	NULL,	1,	'2017-08-29 10:51:28',	'0000-00-00 00:00:00'),
+(49,	34,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503987427-twelve4twelve_1503987427744.jpg',	NULL,	1,	'2017-08-29 11:17:07',	'0000-00-00 00:00:00'),
+(50,	35,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503991580-twelve4twelve_1503991580954.png',	'asdasd',	1,	'2017-08-29 12:26:22',	'0000-00-00 00:00:00'),
+(53,	37,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/videos',	'1503992059-twelve4twelve_1503992059856.jpg',	'asdasd',	1,	'2017-08-29 12:34:19',	'0000-00-00 00:00:00'),
+(54,	37,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503992059-twelve4twelve_1503992059182.jpg',	'asdasd',	1,	'2017-08-29 12:34:19',	'0000-00-00 00:00:00'),
+(55,	38,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/videos',	'1503993053-twelve4twelve_1503993053270.mp4',	'asdasd',	1,	'2017-08-29 12:50:53',	'0000-00-00 00:00:00'),
+(56,	38,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503993053-twelve4twelve_1503993053139.jpg',	'asdasd',	1,	'2017-08-29 12:50:53',	'0000-00-00 00:00:00'),
+(57,	39,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/videos',	'aws_azure.png',	'',	1,	'2017-08-29 12:52:10',	'0000-00-00 00:00:00'),
+(58,	39,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503993130-twelve4twelve_1503993130713.jpeg',	'',	1,	'2017-08-29 12:52:10',	'0000-00-00 00:00:00'),
+(59,	40,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503995117-twelve4twelve_1503995117920.png',	'',	1,	'2017-08-29 13:25:17',	'0000-00-00 00:00:00'),
+(60,	41,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503995152-twelve4twelve_1503995152496.jpg',	'asdasd',	1,	'2017-08-29 13:25:52',	'0000-00-00 00:00:00'),
+(61,	42,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503995228-twelve4twelve_1503995228543.jpg',	'asdasd',	1,	'2017-08-29 13:27:08',	'0000-00-00 00:00:00'),
+(63,	43,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503995258-twelve4twelve_1503995258860.jpg',	'asdasd',	1,	'2017-08-29 13:27:38',	'0000-00-00 00:00:00'),
+(64,	43,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1503995806-twelve4twelve_1503995806485.jpeg',	NULL,	1,	'2017-08-29 13:36:46',	'0000-00-00 00:00:00'),
+(65,	44,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1504075491-twelve4twelve_1504075491506.jpg',	'asdasd',	1,	'2017-08-30 11:44:51',	'0000-00-00 00:00:00'),
+(66,	45,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1504682909-twelve4twelve_1504682909832.png',	'dasdasd',	1,	'2017-09-06 12:28:29',	'0000-00-00 00:00:00'),
+(67,	45,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1504682909-twelve4twelve_1504682909527.jpg',	'dasdasd',	1,	'2017-09-06 12:28:29',	'0000-00-00 00:00:00'),
+(68,	46,	'image/png',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1505998434-twelve4twelve_1505998434365.png',	NULL,	1,	'2017-09-21 17:53:54',	'0000-00-00 00:00:00'),
+(69,	46,	'image/png',	'/var/www/html/twelve4twelve/uploads/stories/images',	'1505998434-twelve4twelve_1505998434649.png',	NULL,	1,	'2017-09-21 17:53:55',	'0000-00-00 00:00:00'),
+(70,	32,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'processor.jpg',	'',	1,	'2017-08-08 11:11:04',	'0000-00-00 00:00:00'),
+(71,	27,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'mouse.jpg',	'',	1,	'2017-08-08 11:11:04',	'0000-00-00 00:00:00'),
+(73,	25,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'keyboard.jpg',	'',	1,	'2017-08-08 11:11:04',	'0000-00-00 00:00:00'),
+(74,	19,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'google_cloud.png',	'',	1,	'2017-08-08 11:11:04',	'0000-00-00 00:00:00'),
+(99,	26,	'image/jpeg',	'/var/www/html/twelve4twelve/uploads/',	'ram.jpg',	'',	1,	'2017-08-08 11:11:04',	'0000-00-00 00:00:00');
+
+DROP TABLE IF EXISTS `sign_up`;
+CREATE TABLE `sign_up` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `confirm_password` varchar(255) NOT NULL,
+  `phone_number` varchar(255) NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `status` enum('enable','disable','delete') NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+
+INSERT INTO `sign_up` (`id`, `first_name`, `last_name`, `email`, `password`, `confirm_password`, `phone_number`, `gender`, `status`) VALUES
+(1,	'uzair',	'hussain',	'uzair.hussain7@gmail.com',	'fbc8705ed08af4c72a7e451169bf848f4d5adc67a331abbd8cfc4170b6c137b4',	'fbc8705ed08af4c72a7e451169bf848f4d5adc67a331abbd8cfc4170b6c137b4',	'0345',	'male',	'enable'),
+(2,	'uzair',	'hussain',	'uzair.hussain7@gmail.com',	'64bbdba135e584efc34ab99a43055e9e48a98965cb32e4cbb5b650848f3c2f57',	'64bbdba135e584efc34ab99a43055e9e48a98965cb32e4cbb5b650848f3c2f57',	'03452009275',	'male',	'enable');
+
+DROP TABLE IF EXISTS `site_seo`;
+CREATE TABLE `site_seo` (
+  `seo_id` int(11) NOT NULL AUTO_INCREMENT,
+  `slug` varchar(255) DEFAULT NULL,
+  `page_title` varchar(255) DEFAULT NULL,
+  `meta_description` text,
+  `meta_keywords` text,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime DEFAULT NULL,
+  PRIMARY KEY (`seo_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `site_seo` (`seo_id`, `slug`, `page_title`, `meta_description`, `meta_keywords`, `date_created`, `date_updated`) VALUES
+(1,	'test',	'test 1',	'test',	'test1',	'2017-08-31 20:45:46',	NULL);
+
+DROP TABLE IF EXISTS `software_category`;
+CREATE TABLE `software_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `software_category_name` varchar(255) CHARACTER SET ascii NOT NULL,
+  `software_category_short_description` varchar(255) CHARACTER SET ascii NOT NULL,
+  `date_created` datetime NOT NULL,
+  `slug` varchar(255) CHARACTER SET ascii NOT NULL,
+  `resource_type` varchar(255) CHARACTER SET ascii NOT NULL,
+  `resource_path` varchar(255) CHARACTER SET ascii NOT NULL,
+  `resource_name` varchar(255) CHARACTER SET ascii NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `story`;
+CREATE TABLE `story` (
+  `story_id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_id` int(11) NOT NULL,
+  `story_name` varchar(255) NOT NULL,
+  `story_short_text` text NOT NULL,
+  `story_long_text` text NOT NULL,
+  `story_short_description` text,
+  `story_description` text,
+  `fundraising_target` float(10,2) NOT NULL,
+  `story_is_donated` enum('0','1') NOT NULL DEFAULT '1',
+  `story_is_allowed` enum('0','1') NOT NULL,
+  `fundraising_status` enum('0','1') NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime NOT NULL,
+  `created_by` int(11) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `page_title` varchar(255) DEFAULT NULL,
+  `meta_keywords` text,
+  `meta_description` text,
+  PRIMARY KEY (`story_id`),
+  KEY `category_id` (`category_id`),
+  KEY `story_created_by` (`created_by`),
+  CONSTRAINT `story_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`),
+  CONSTRAINT `story_ibfk_2` FOREIGN KEY (`created_by`) REFERENCES `users` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `story` (`story_id`, `category_id`, `story_name`, `story_short_text`, `story_long_text`, `story_short_description`, `story_description`, `fundraising_target`, `story_is_donated`, `story_is_allowed`, `fundraising_status`, `date_created`, `date_updated`, `created_by`, `slug`, `page_title`, `meta_keywords`, `meta_description`) VALUES
+(19,	3,	'Google Cloud',	'',	'',	'story short description',	'fund story description',	9000.00,	'0',	'1',	'0',	'2017-08-08 10:25:19',	'2017-08-29 23:31:06',	1,	'Google Cloud',	'google_cloud',	'google_cloud',	'google_cloud'),
+(20,	3,	'Mult Cloud',	'',	'',	'story short description',	'asddd story ',	1200.00,	'0',	'1',	'0',	'2017-08-08 11:11:04',	'2017-08-29 23:31:06',	1,	'mult_cloud',	'mult_cloud',	'mult_cloud',	'mult_cloud'),
+(21,	4,	'Python',	'',	'',	'story short description',	'asd description',	600.00,	'0',	'1',	'0',	'2017-08-08 11:52:22',	'2017-08-29 23:31:06',	1,	'Python',	NULL,	NULL,	NULL),
+(22,	4,	'Asp.Net',	'',	'',	'story short description',	'ssss description',	1222.00,	'0',	'1',	'0',	'2017-08-08 14:50:09',	'2017-08-29 23:31:06',	1,	'asp.net',	'asp.net',	'asp.net',	'asp.net'),
+(23,	4,	'ios',	'',	'',	'story short description',	'mul description',	145.00,	'0',	'1',	'0',	'2017-08-08 15:37:20',	'2017-08-29 23:31:06',	1,	'ios',	'ios',	'ios',	'ios'),
+(24,	1,	'mul pic',	'',	'',	'story short description',	'mul pic description',	50.00,	'1',	'1',	'1',	'2017-08-08 15:45:28',	'2017-08-29 23:31:06',	1,	'mul-pic',	NULL,	NULL,	NULL),
+(25,	2,	'keyboard',	'',	'',	'story short description',	'wwww description',	10000.00,	'0',	'1',	'0',	'2017-08-08 17:17:27',	'2017-08-29 23:31:06',	1,	'keyboard',	'keyboard',	'keyboard',	'keyboard'),
+(26,	2,	'ram',	'',	'',	'story short description',	'qw description',	200.00,	'0',	'1',	'0',	'2017-08-15 09:05:12',	'2017-08-29 23:31:06',	1,	'ram',	NULL,	'ram',	'ram'),
+(27,	2,	'mouse',	'',	'',	'story short description',	'adddddddddd',	10000.00,	'0',	'1',	'0',	'2017-08-21 17:19:29',	'2017-08-29 23:31:06',	1,	'mouse',	NULL,	NULL,	NULL),
+(28,	1,	'new',	'',	'',	'story short description',	'fir test',	50000.00,	'1',	'1',	'0',	'2017-08-21 17:19:56',	'2017-08-29 23:31:06',	1,	'new',	NULL,	NULL,	NULL),
+(29,	2,	'this',	'',	'',	'story short description',	'this is story desc',	2000.00,	'1',	'1',	'1',	'2017-08-23 14:39:45',	'2017-08-29 23:31:06',	1,	'this',	NULL,	NULL,	NULL),
+(30,	1,	'Storu fun',	'',	'',	'sssssssssssssss',	'this is storu fund showt desc',	200.00,	'1',	'1',	'1',	'2017-08-25 21:00:45',	'2017-08-29 23:31:06',	1,	'storu-fun',	NULL,	NULL,	NULL),
+(31,	1,	'mul vid',	'',	'',	'sssssssssssssssssss',	'thi is multiple video desc',	200.00,	'1',	'1',	'1',	'2017-08-25 21:01:15',	'2017-08-29 23:31:06',	1,	'mul-vid',	NULL,	NULL,	NULL),
+(32,	2,	'processor',	'',	'',	NULL,	'processor',	20.00,	'0',	'1',	'0',	'2017-08-28 10:36:24',	'2017-08-29 23:31:06',	1,	'processor',	NULL,	'processor',	'processor'),
+(33,	1,	'Python Development',	'',	'',	NULL,	'test for pic ',	2000.00,	'1',	'1',	'0',	'2017-08-28 21:46:36',	'2017-08-29 23:31:06',	1,	'python_development',	'aaaa',	'aaaa',	'aaaaa'),
+(34,	1,	'System Engineer',	'',	'',	NULL,	'asasasas',	20.00,	'1',	'1',	'0',	'2017-08-29 10:49:14',	'2017-08-29 23:31:06',	1,	'system_engineer',	'asasas',	'asasasas',	'asasas'),
+(35,	1,	'quality assurance',	'',	'',	NULL,	'asdasd',	200.00,	'1',	'1',	'0',	'2017-08-29 12:26:21',	'2017-08-29 23:31:06',	1,	'quality_assurance',	'asdasd',	'asdasd',	'asdasd'),
+(36,	1,	'mobile',	'',	'',	NULL,	'aasds',	20.00,	'1',	'1',	'0',	'2017-08-29 12:30:01',	'2017-08-29 23:31:06',	1,	'mobile',	'20',	'asd',	'asdasdas'),
+(37,	1,	'web',	'',	'',	NULL,	'asdasd',	20.00,	'1',	'1',	'0',	'2017-08-29 12:34:19',	'2017-08-29 23:31:06',	1,	'web',	'asdasd',	'asdasd',	'asdasd'),
+(38,	1,	'ssqqq',	'',	'',	NULL,	'sadasd',	40.00,	'1',	'1',	'1',	'2017-08-29 12:50:53',	'2017-08-30 01:26:54',	1,	'ssqqq',	'asdasd',	'asdasd',	'asdasdas'),
+(39,	3,	'Aws Azure',	'',	'',	NULL,	'asdasd',	20000.00,	'0',	'1',	'0',	'2017-08-29 12:52:10',	'2017-08-29 23:31:06',	1,	'aws_azure',	'aws_azure',	'aws_azure',	'aws_azure'),
+(40,	1,	'windows',	'',	'',	NULL,	'sadasd',	0.00,	'1',	'1',	'0',	'2017-08-29 13:25:17',	'2017-08-29 23:31:06',	1,	'windows',	'windows',	'asdasdas',	'asdasd'),
+(41,	1,	'illustrator',	'',	'',	NULL,	'asdasda',	0.00,	'1',	'1',	'0',	'2017-08-29 13:25:52',	'2017-08-29 23:31:06',	1,	'illustrator',	'asdasd',	'asdasd',	'asdasd'),
+(42,	1,	'customized software development',	'',	'',	NULL,	'asdasd',	0.00,	'1',	'1',	'0',	'2017-08-29 13:27:08',	'2017-08-29 23:31:06',	1,	'customized_software_development',	'asdasd',	'asdas',	'asdasd'),
+(43,	1,	'corel draw',	'',	'',	NULL,	'asdasdasd',	0.00,	'1',	'1',	'0',	'2017-08-29 13:27:38',	'2017-08-29 23:31:06',	1,	'corel_draw',	'asdasd',	'asdasdas',	'asdasdas'),
+(44,	1,	'teststss',	'',	'',	NULL,	'assdasd',	500.00,	'1',	'0',	'0',	'2017-08-30 11:44:51',	'2017-09-06 11:41:54',	1,	'teststss',	'asdasd',	'asdasd',	'asdasdas'),
+(45,	1,	'adobe reader',	'',	'',	NULL,	'asdasd',	2000.00,	'1',	'1',	'0',	'2017-09-06 12:28:29',	'0000-00-00 00:00:00',	1,	'adobe reader',	'adasd',	'asdasd',	'asdasd'),
+(46,	12,	'windows',	'',	'',	NULL,	'awdasdas',	3000.00,	'1',	'1',	'0',	'2017-09-21 17:52:14',	'0000-00-00 00:00:00',	1,	'windows',	'sd',	'e',	'sd');
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `country` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  `zipcode` varchar(255) DEFAULT NULL,
+  `status` enum('Disable','Enable','Temp','Delete') DEFAULT 'Enable',
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `user_type_id` int(11) NOT NULL,
+  `group_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  KEY `user_type_id` (`user_type_id`),
+  KEY `group_id` (`group_id`),
+  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`user_type_id`) REFERENCES `user_type` (`user_type_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `users` (`user_id`, `user_name`, `email`, `first_name`, `last_name`, `password`, `country`, `city`, `state`, `zipcode`, `status`, `date_created`, `date_updated`, `created_by`, `user_type_id`, `group_id`) VALUES
+(1,	'Rumman',	'rumman@hotmail.com',	'Rummanas',	'Chughtaiasd',	'186cf774c97b60a1c106ef718d10970a6a06e06bef89553d9ae65d938a886eae',	'Pakistanasd',	'Rawalpindiasd',	'Punjabasd',	'46000asd',	'Enable',	'2017-07-26 14:56:51',	'2017-08-30 14:38:27',	1,	1,	NULL),
+(2,	'Hassan',	'rumman.mangocoder@gmail.com',	'Hassan',	'Ahmed',	'186cf774c97b60a1c106ef718d10970a6a06e06bef89553d9ae65d938a886eae',	'Pakistan',	'Rawalpindi',	NULL,	NULL,	'Enable',	'2017-07-26 14:57:51',	'2017-08-30 14:38:27',	1,	2,	1),
+(3,	'hadi',	'abc@hotmail.com',	'Hadi',	'Ahmed',	'super',	'Pakistan',	'Rawalpindi',	'punjab',	'46000',	'Enable',	'2017-07-27 18:54:59',	'2017-08-18 17:43:33',	1,	1,	NULL),
+(5,	'umer',	'umer@hotmail.com',	'umer',	'ahmed',	'8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',	'Pakistan',	'Rwp',	'punjab',	'46000',	'Enable',	'2017-07-28 14:09:52',	'2017-08-30 14:38:27',	1,	2,	1),
+(6,	'owais',	'owais@hotmail.com',	'Awais',	'ahmed',	'8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',	'Pakistan',	'Rawalpindi',	'punjab',	'46000',	'Enable',	'2017-07-28 14:22:40',	'2017-08-30 14:38:27',	1,	2,	1),
+(7,	'Ahmed',	'ahmed@hotmail.com',	'ahmed',	'ooo',	'general',	'',	NULL,	NULL,	NULL,	'Enable',	'2017-08-03 13:31:04',	'2017-08-18 17:43:33',	1,	3,	NULL),
+(8,	'zxczxcZ',	'hash@gmail.com',	'kljhjk',	'hjkhk',	'5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',	'sdf',	'asdasd',	'sdf',	'sdf',	'Enable',	'2017-08-03 16:39:41',	'2017-08-30 14:38:27',	1,	2,	1),
+(9,	'uzair',	'uzair@hotmail.com',	'uzari',	'asd',	'fb9cb615bc8af61c8a96e3b8a07df628f3f5af0dfceeef7663804455277945b1',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-07 17:06:29',	'2017-08-18 17:43:33',	1,	1,	NULL),
+(10,	'Asad',	'asad@hotmail.com',	'Asad',	'umer',	'8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',	'Pakistan',	'Rawalpindi',	'Punjav',	'46000',	'Enable',	'2017-08-14 16:12:18',	'2017-08-30 14:38:27',	1,	2,	1),
+(11,	'Amir',	'amir@hotmail.com',	'Amir',	'Adnan',	'8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-14 16:13:49',	'2017-08-30 14:38:27',	1,	2,	1),
+(12,	'Arslan',	'arslan@hotmail.com',	'Arslan',	'Arslan',	'8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',	'Pakisatan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-14 16:18:55',	'2017-08-18 17:43:33',	1,	1,	NULL),
+(14,	'Asad',	'asd@hotmail.com',	'Asad',	'umer',	'asd',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-17 00:55:40',	'2017-08-18 17:43:33',	1,	4,	NULL),
+(15,	'haroon',	'haroon@hotmail.com',	'haroon',	'Rashid',	'haroon',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-17 09:36:01',	'2017-08-18 17:43:33',	NULL,	4,	NULL),
+(16,	'sss',	'has@hotmail.com',	'sss',	'asdasd',	'asdfghjk',	'sss',	'asdsd',	'sss',	'sss',	'Enable',	'2017-08-17 18:10:12',	'2017-08-18 17:43:33',	NULL,	4,	NULL),
+(17,	'sss',	'hasshh@hotmail.com',	'sss',	'asdasd',	'5c80565db6f29da0b01aa12522c37b32f121cbe47a861ef7f006cb22922dffa1',	'sss',	'asdsd',	'sss',	'sss',	'Enable',	'2017-08-17 18:18:10',	'2017-08-18 17:43:33',	NULL,	4,	NULL),
+(18,	'Imran',	'imran@hotmail.com',	'Imraan',	'khan',	'186cf774c97b60a1c106ef718d10970a6a06e06bef89553d9ae65d938a886eae',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-17 21:31:33',	'2017-08-18 17:43:33',	1,	1,	NULL),
+(19,	'jahngir',	'jhangir@hotmail.com',	'jahngir',	'tareen',	'061a1c0ea20e6b5d90ace3c0d879304b52c751ef53e62ccf159e1fb21d954c2f',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-17 21:49:48',	'2017-08-30 14:38:27',	1,	2,	1),
+(20,	'adnan',	'adnan@hotmail.com',	'adnan',	'liaqat',	'15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-17 21:51:08',	'2017-08-18 17:43:33',	NULL,	4,	NULL),
+(21,	'Asad',	'rummanchu@hotmail.com',	'Asad',	'umer',	'15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-17 23:12:40',	'2017-08-18 17:43:33',	NULL,	4,	NULL),
+(22,	'Asad',	'h@hotmail.com',	'Asad',	'Rashid',	'15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-17 23:27:34',	'2017-08-18 17:43:33',	NULL,	4,	NULL),
+(23,	'Asad',	'asdfu@hotmail.com',	'Asad',	'umer',	'186cf774c97b60a1c106ef718d10970a6a06e06bef89553d9ae65d938a886eae',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Temp',	'2017-08-18 17:29:25',	'2017-08-18 17:43:33',	NULL,	4,	NULL),
+(24,	'Maaan',	'admin@hotmail.com',	'Maan',	'Maan',	'15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225',	'Pakistan',	'Rawalpindi',	'Punjab',	'46000',	'Enable',	'2017-08-30 14:34:34',	'2017-08-30 14:38:27',	1,	2,	1);
+
+DROP TABLE IF EXISTS `user_type`;
+CREATE TABLE `user_type` (
+  `user_type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `system_name` varchar(255) NOT NULL,
+  `front_name` varchar(255) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime NOT NULL,
+  PRIMARY KEY (`user_type_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `user_type` (`user_type_id`, `system_name`, `front_name`, `date_created`, `date_updated`) VALUES
+(1,	'super_user',	'Super User',	'2017-07-26 14:56:16',	'2017-07-26 14:56:16'),
+(2,	'admin',	'Admin',	'2017-07-26 14:56:33',	'2017-07-26 14:56:33'),
+(3,	'general',	'user',	'2017-08-03 13:30:35',	'2017-08-03 13:30:35'),
+(4,	'registered_user',	'Registered User',	'2017-08-16 15:15:48',	'2017-08-16 15:15:48');
+
+DROP TABLE IF EXISTS `vendors`;
+CREATE TABLE `vendors` (
+  `vendors_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `sub_category` varchar(255) NOT NULL,
+  `short_description` text NOT NULL,
+  PRIMARY KEY (`vendors_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=ascii;
+
+INSERT INTO `vendors` (`vendors_id`, `name`, `category`, `sub_category`, `short_description`) VALUES
+(1,	'Johnson',	'Machine Learning',	'Artificial Intelligence,computer vision',	'Machine learning is the scientific study of algorithms and statistical models that computer systems use in order to perform a specific task effectively without using explicit instructions, relying on patterns and inference instead. It is seen a'),
+(2,	'uzair Hussain',	'artificial intelligence',	'pattern recognize',	'<p><strong>In computer science, artificial intelligence, sometimes called machine intelligence, is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans.</strong></p>');
+
+DROP TABLE IF EXISTS `webpages`;
+CREATE TABLE `webpages` (
+  `Id` int(5) unsigned NOT NULL AUTO_INCREMENT,
+  `meta_keywords` text NOT NULL,
+  `meta_description` text NOT NULL,
+  `page_title` varchar(255) NOT NULL,
+  `page_heading` varchar(100) NOT NULL,
+  `page_content` text NOT NULL,
+  `status` enum('Enable','Disable','Delete') NOT NULL DEFAULT 'Enable',
+  `sortorder` int(5) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime DEFAULT NULL,
+  `slug` varchar(255) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO `webpages` (`Id`, `meta_keywords`, `meta_description`, `page_title`, `page_heading`, `page_content`, `status`, `sortorder`, `date_created`, `date_updated`, `slug`) VALUES
+(1,	'About-us',	'About-us Page',	'Twelve for Twelve - About Us',	'About-us',	'	\r\n<section class=\"banner\">\r\n			<div class=\"content\">\r\n				<img src=\"%base_url%r/images/main-heading-logo.png\" alt=\"\">\r\n				<h1>About Us</h1>\r\n				<h4>Suspendisse commodo hendrerit dapibus nulla rhoncus bibendum pellentesque morbi facilisis urna arcu nunc vel fermentum massaras ullamcorper ex elit, id consequat mi auctor tempus.</h4>\r\n			</div>\r\n	</section>\r\n\r\n	</header>\r\n	<section class=\"sub-page-container\">\r\n		<div class=\"sub-page-about-us\">\r\n			<div class=\"content\">\r\n				<h2>In at convallis sapien<br> Etiam ut ipsum magna <span>ivamus vitae dolor</span> eu dui porta faucibus. Quisque eget felis tempus metus luctus porta.<br><span> Maecenas sit amet felis est.</span> <br>Aliquam a vulputate ligula, non rhoncus mi.</h2>\r\n\r\n				<p>In at convallis sapien etiam ut ipsum magna ivamus vitae dolor eu dui porta faucibus.  Quisque eget felis tempus metus luctus porta.  Maecenas sit amet felis est. Aliquam a vulputate ligula, non rhoncus mi.In at convallis sapien etiam ut ipsum magna ivamus vitae dolor eu dui porta faucibus.  Quisque eget felis tempus metus luctus porta.  Maecenas sit amet felis est. Aliquam a vulputate ligula, non rhoncus mi.In at convallis sapien etiam ut ipsum magna ivamus vitae dolor eu dui porta faucibus.  Quisque eget felis tempus metus luctus porta.  Maecenas sit amet felis est. Aliquam a vulputate ligula, non rhoncus mi.In at convallis sapien etiam ut ipsum magna ivamus vitae dolor eu dui porta faucibus.  Quisque eget felis tempus metus luctus porta.  Maecenas sit amet felis est. Aliquam a vulputate ligula, non rhoncus mi.</p>\r\n			</div>  <!-- /end content -->\r\n		</div>	<!-- /end sub page about-us -->\r\n		<div class=\"our-team\">\r\n			<div class=\"content\">\r\n				<h2>Our Team</h2>\r\n			\r\n				<div class=\"team-member\">\r\n					<img src=\"%base_url%r/images/team-member-01.png\" alt=\"\">\r\n					<h3><a href=\"#\">Lara Davidson</a></h3>\r\n						<p>CEO</p>\r\n				</div>	<!-- /end team-member -->\r\n\r\n				<div class=\"team-member\">\r\n					<img src=\"%base_url%r/images/team-member-02.png\" alt=\"\">\r\n					<h3><a href=\"#\">David Thomson</a></h3>\r\n						<p>Designer</p>\r\n				</div>	<!-- /end team-member -->\r\n\r\n				<div class=\"team-member\">\r\n					<img src=\"%base_url%r/images/team-member-03.png\" alt=\"\">\r\n					<h3><a href=\"#\">Grace Garey</a></h3>\r\n						<p>HR Manager</p>\r\n				</div>	<!-- /end team-member -->\r\n\r\n				<div class=\"team-member\">\r\n					<img src=\"%base_url%r/images/team-member-04.png\" alt=\"\">\r\n					<h3><a href=\"#\">Chase Adam</a></h3>\r\n						<p>Developer</p>\r\n				</div>	<!-- /end team-member -->\r\n\r\n				<div class=\"team-member\">\r\n					<img src=\"%base_url%r/images/team-member-01.png\" alt=\"\">\r\n					<h3><a href=\"#\">Lara Davidson</a></h3>\r\n						<p>CEO</p>\r\n				</div>	<!-- /end team-member -->\r\n\r\n				<div class=\"team-member\">\r\n					<img src=\"%base_url%r/images/team-member-02.png\" alt=\"\">\r\n					<h3><a href=\"#\">David Thomson</a></h3>\r\n						<p>Designer</p>\r\n				</div>	<!-- /end team-member -->\r\n\r\n				<div class=\"team-member\">\r\n					<img src=\"%base_url%r/images/team-member-03.png\" alt=\"\">\r\n					<h3><a href=\"#\">Grace Garey</a></h3>\r\n						<p>HR Manager</p>\r\n				</div>	<!-- /end team-member -->\r\n\r\n				<div class=\"team-member\">\r\n					<img src=\"%base_url%r/images/team-member-04.png\" alt=\"\">\r\n					<h3><a href=\"#\">Chase Adam</a></h3>\r\n						<p>Developer</p>\r\n				</div>	<!-- /end team-member -->\r\n			</div>	<!-- /end content -->\r\n		</div>	<!-- /end our team -->\r\n	</section>\r\n',	'Enable',	1,	'2017-08-16 12:52:38',	NULL,	'About-us');
+
+-- 2019-07-07 17:05:00

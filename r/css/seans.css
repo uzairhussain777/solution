@@ -1,0 +1,147 @@
+.text-muted{
+    color: rgba(255,255,255,0.9);
+}
+
+.nav.navbar-right > li > a{
+    color: rgba(255,255,255,0.9);
+}
+
+.main-logo{
+    max-width:350px;
+    background: url('../img/saas-logo-alt.png');
+}
+
+.saas-logo{
+    max-width:170px;
+}
+
+body {
+    background: #fff;
+}
+
+.row.login {
+    background: #ffffff;
+    padding: 0 15px;
+    border-bottom: 1px solid #d9dde5;
+}
+.row.login.bottom{
+    border-top: 1px solid #fff;
+    background-color: #f3f5fa;
+}
+.left-b{
+    border-left: 1px solid #ccc;
+}
+
+.row.login div[class*="col-md-"]{
+    margin-top:15px;
+}
+
+.accent-bar{
+    background: url('../img/login-accent.png');
+    background-repeat: repeat-x;
+    height: 8px;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.login-bg{
+background: url('../img/material1e.jpg') no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.register-bg{
+    background: url('../img/material2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.inline-form li,
+.inline-form .form-control{
+    display:inline;
+    width:initial;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #909;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #909;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #909;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #909;
+}
+
+.nav.navbar-top-links .small li a{
+    font-size: 12px;
+    color: #666666;
+    padding: 0px 20px;
+    margin: 0;
+}
+
+.nav.navbar-top-links .small li {
+    margin-left: -15px;
+    padding-left: 15px;
+}
+
+.nav.navbar-top-links .small li.inset a{
+
+}
+
+.nav.navbar-top-links .small li.heading{
+    color:#c1c1c1;
+    color: #c1c1c1;
+    padding: 5px 5px 5px 10px;
+    margin-left: 0;
+}
+
+.md-icon{
+    display:inline-block;
+    font-family: 'Material Icons';
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" 1;
+    font-style: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+
+.sm-icon{
+    display:inline-block;
+    font-family: 'Material Icons';
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" 1;
+    font-style: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+
+.nav-second-level li a{
+    display:inline-block;
+}
+.navbar-fixed-top, .navbar-static-top{
+background: url("../img/material2.jpg")center right;
+}
